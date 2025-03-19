@@ -1,0 +1,29 @@
+<aura:component implements="lightning:isUrlAddressable" 
+                access="global"
+                description="Component to include execute a flow in a tab and control navigation to a dynamic target upon completion.">
+	
+    <!-- Component Parameters -->
+    <aura:attribute name="target"	    type="String"
+                    access="private"		
+                    description="Name of the flow variable providing the target record ID." />
+	<aura:attribute name="recordId"	    type="String"
+                    access="private"		
+                    description="Input record ID." />
+
+    <!-- Component Initialisation -->    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"
+                  description="Init of component : parsing and reset of attributes."/>
+    
+    <!--
+    <aura:handler name="change" value="{!v.pageReference}"
+                  action="{!c.doRefresh}" />
+    -->
+    <!-- Utilities -->
+    <lightning:workspaceAPI aura:id="workspaceUtil"/>
+	<lightning:navigation aura:id="navService"/>
+    
+    <!-- Component Display -->
+    <div class="slds-box slds-box_x-small slds-theme_default" style="min-height:calc(100vh - 300px);">
+    	<lightning:flow aura:id="flowContainer" onstatuschange="{!c.statusChange}"/>    
+	</div>
+</aura:component>

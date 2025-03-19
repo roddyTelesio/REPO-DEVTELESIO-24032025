@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isDisplayButton}>
+        <lightning-button label="Back to CRM Tab" variant="brand" onclick={handleClickButton}></lightning-button> 
+    </template>
+    <div class="spinner-container">
+        <template if:true={spinner}>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+    </div>
+    
+</template>

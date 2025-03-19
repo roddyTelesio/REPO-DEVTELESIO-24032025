@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Post_to_chatter_Group</name>
+        <label>Post to chatter Group</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>User_Portal_Deactivation3</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>messageToSupportLevel1_Deactivation_User</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Get_Contact_Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Check if contact is already deactivated</description>
+        <name>Contact_Already_Deactivated</name>
+        <label>Contact Already Deactivated ?</label>
+        <locationX>248</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Get_Support_Level_1_Chatter_Group</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesContactAlreadyDeactivated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact_Record.Tech_AssociatedPortalUserId__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>User_Portal_Deactivation2</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determine if account type is broker/reinsurer</description>
+        <name>Is_Account_Eligible</name>
+        <label>Is Account Eligible ?</label>
+        <locationX>545</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>User_Portal_Deactivation_2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact_Record.Account.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Broker</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Contact_Record.Account.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reinsurer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_Already_Deactivated</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Treaties field on contact has been ticked</description>
+        <name>Treaty_Field_Ticked_On_Contact</name>
+        <label>Treaty Field Ticked On Contact ?</label>
+        <locationX>446</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>User_Portal_Deactivation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesContactPartticipateOnPhaseTreatyPlacement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact_Record.Treaties__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_to_chatter_Group</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>BaseURLContact</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_540},FIND(&quot;/services&quot;, {!$Api.Enterprise_Server_URL_540}))</expression>
+    </formulas>
+    <formulas>
+        <name>ContactName</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!Get_Contact_Record.Salutation}) &amp; &apos; &apos; &amp; {!Get_Contact_Record.FirstName} &amp; &apos; &apos; &amp; {!Get_Contact_Record.LastName}</expression>
+    </formulas>
+    <interviewLabel>Flow_Contact Portal User Deactivation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow_Contact Portal User Deactivation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Contact_Record</name>
+        <label>Get Contact Record</label>
+        <locationX>545</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Account_Eligible</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Support_Level_1_Chatter_Group</name>
+        <label>Get Support Level 1 Chatter Group</label>
+        <locationX>446</locationX>
+        <locationY>458</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Treaty_Field_Ticked_On_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Support Level 1</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CollaborationGroup</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>User_Portal_Deactivation</name>
+        <label>User Portal Deactivation</label>
+        <locationX>578</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorBody2</name>
+            <fieldText>&lt;h1&gt;&lt;strong style=&quot;font-size: 12px; font-family: none;&quot;&gt;❌  &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(238, 12, 12);&quot;&gt;Please verify that the checkbox&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(238, 12, 12);&quot;&gt;&lt;u&gt;Treaty Placement&lt;/u&gt;&lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(238, 12, 12);&quot;&gt;&amp;nbsp;is activated  in order to proceed to the deactivation of user portal&lt;/span&gt;&lt;/h1&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>User_Portal_Deactivation2</name>
+        <label>User Portal Deactivation</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorMessage</name>
+            <fieldText>&lt;h1&gt;&lt;strong style=&quot;font-size: 12px; font-family: none;&quot;&gt;❌ &lt;/strong&gt;&lt;span style=&quot;font-size: 12px; color: rgb(218, 21, 21);&quot;&gt;The contact {!ContactName} has already been deactivated!!&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>User_Portal_Deactivation3</name>
+        <label>User Portal Deactivation</label>
+        <locationX>314</locationX>
+        <locationY>782</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>SuccessBody</name>
+            <fieldText>&lt;p&gt;✅ &lt;span style=&quot;color: rgb(35, 137, 95);&quot;&gt;You&apos;re request was successfully submitted  to the &quot;Support Level 1&quot; Team.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(35, 137, 95);&quot;&gt;You will be notified once &lt;/span&gt;&lt;span style=&quot;color: rgb(35, 137, 95); background-color: rgb(255, 255, 255);&quot;&gt;{!ContactName} has been deactivated in portal user.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>User_Portal_Deactivation_2</name>
+        <label>User Portal Deactivation</label>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorBody</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 12px; font-family: none; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;❌  &lt;/strong&gt;&lt;strong style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(218, 21, 21);&quot;&gt;Operation is valid only on a contact related to a &quot;&lt;u&gt;Broker&lt;/u&gt;&quot; ou &quot;&lt;u&gt;Reinsurer&lt;/u&gt;&quot; Company Type.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>419</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>messageToSupportLevel1_Deactivation_User</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>The contact {!ContactName} must be deactivated for the following account {!Get_Contact_Record.Account.Name}.
+Can you please deactivate its portal user ?
+
+Contact Details: {!BaseURLContact}{!Get_Contact_Record.Id}
+cc: @[{!Get_Support_Level_1_Chatter_Group.Id}] @[{!$User.Id}]</text>
+    </textTemplates>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

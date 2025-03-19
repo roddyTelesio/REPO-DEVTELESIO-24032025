@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Migrated from the Account_Create_PublicGroup process using Company Referential Id Not NULL criteria.
+Create a Public Group related to Company (PublicGroup&apos;s GroupName = Company Referential Id) then create AccountShare record</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_5_myRule_1_A1_4210546490</name>
+        <dataType>String</dataType>
+        <expression>IF((LEN({!$Record.Name})&lt;=  40 &amp;&amp; (TRIM(RIGHT({!$Record.Name},3)) = &apos;(P)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(C)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(B)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(R)&apos;)), {!$Record.Name}
+, IF({!$Record.RecordType.DeveloperName} = &apos;CompanyGroup&apos; , 
+ TRIM(LEFT({!$Record.Name},40))
+, IF({!$Record.RecordType.DeveloperName} = &apos;PrincipalCedingCompany&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (P)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;CoveredCedingCompany&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (C)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;Broker&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (B)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;Reinsurer&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (R)&apos;
+,TRIM(LEFT({!$Record.Name},40)) ) ) ) ) )
+)</expression>
+    </formulas>
+    <label>Account_Create_PublicGroup_1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_1_A1</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>TECH_ReferentialId__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>myWaitEvent_myWait_myRule_1_event_0</name>
+            <connector>
+                <targetReference>myWaitEvent_myWait_myRule_1_event_0_SA1</targetReference>
+            </connector>
+            <label>ScheduledPath_1</label>
+            <offsetNumber>0</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>myRule_1_A1</name>
+        <label>Create PublicGroup &amp; AccountShare</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <flowName>Flow_Account_CreatePublicGroup</flowName>
+        <inputAssignments>
+            <name>VarCompanyId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarCompanyName</name>
+            <value>
+                <elementReference>formula_5_myRule_1_A1_4210546490</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarReferentialId</name>
+            <value>
+                <elementReference>$Record.TECH_ReferentialId__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarCompanyRT</name>
+            <value>
+                <elementReference>$Record.RecordType.DeveloperName</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>myWaitEvent_myWait_myRule_1_event_0_SA1</name>
+        <label>Add All Internal User to Public Group</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <flowName>Flow_GroupMember_AddAllInternalUsers</flowName>
+        <inputAssignments>
+            <name>VarReferentialId</name>
+            <value>
+                <elementReference>$Record.TECH_ReferentialId__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarCompanyRT</name>
+            <value>
+                <elementReference>$Record.RecordType.DeveloperName</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

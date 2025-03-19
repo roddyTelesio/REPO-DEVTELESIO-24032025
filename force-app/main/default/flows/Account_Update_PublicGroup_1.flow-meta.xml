@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Migrated from the Account_Update_PublicGroup process using Update Account criteria.
+Account_Update_PublicGroup</description>
+    <formulas>
+        <name>formula_1_myRule_1_A1_9682195542</name>
+        <dataType>String</dataType>
+        <expression>IF((LEN({!$Record.Name})&lt;=  40 &amp;&amp; (TRIM(RIGHT({!$Record.Name},3)) = &apos;(P)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(C)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(B)&apos; || TRIM(RIGHT({!$Record.Name},3)) = &apos;(R)&apos;)), {!$Record.Name}
+, IF({!$Record.RecordType.DeveloperName} = &apos;CompanyGroup&apos; , 
+ TRIM(LEFT({!$Record.Name},40))
+, IF({!$Record.RecordType.DeveloperName} = &apos;PrincipalCedingCompany&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (P)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;CoveredCedingCompany&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (C)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;Broker&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (B)&apos;
+, IF({!$Record.RecordType.DeveloperName} = &apos;Reinsurer&apos;, TRIM(LEFT({!$Record.Name},36)) &amp; &apos; (R)&apos;
+,TRIM(LEFT({!$Record.Name},40)) ) ) ) ) )
+)</expression>
+    </formulas>
+    <label>Account_Update_PublicGroup_1</label>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_1_A1</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>myRule_1_A1</name>
+        <label>Update Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Flow_Account_CreatePublicGroup</flowName>
+        <inputAssignments>
+            <name>VarCompanyId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarCompanyName</name>
+            <value>
+                <elementReference>formula_1_myRule_1_A1_9682195542</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarReferentialId</name>
+            <value>
+                <elementReference>$Record.TECH_ReferentialId__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VarCompanyRT</name>
+            <value>
+                <elementReference>$Record.RecordType.DeveloperName</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>UpdateDocumentVersionDetail</name>
+        <label>UpdateDocumentVersionDetail</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignmentItems>
+            <assignToReference>DocumentVersion.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Apttus__OriginalDocumentVersionDetail__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>DocumentVersion.Sent_For_Review__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Document_Version_Detail</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>CLM - Document Version Details - Show Documents Reviewed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Document Version Details - Show Documents Reviewed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates document version detail to indicate that it was sent for review</description>
+        <name>Update_Document_Version_Detail</name>
+        <label>Update Document Version Detail</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputReference>DocumentVersion</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateDocumentVersionDetail</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Apttus__ReviewCycleType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Parallel Review</stringValue>
+            </value>
+        </filters>
+        <object>Apttus__ReviewCycle__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>DocumentVersion</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Apttus__DocumentVersionDetail__c</objectType>
+    </variables>
+</Flow>

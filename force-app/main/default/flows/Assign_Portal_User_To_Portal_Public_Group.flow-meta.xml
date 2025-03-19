@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_if_public_group_exists</name>
+        <label>Check if public group exists</label>
+        <locationX>611</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Portal_Group_exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Portal_Public_Group</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Company_Role_and_Subordinate</targetReference>
+            </connector>
+            <label>Portal Group exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_user_is_already_in_Public_Group</name>
+        <label>Check if user is already in Public Group</label>
+        <locationX>380</locationX>
+        <locationY>863</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>User_Is_Not_in_Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_existing_group_member_record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Role_Id_Exists</targetReference>
+            </connector>
+            <label>User Is Not in Group</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_User_Portal</name>
+        <label>Is User Portal</label>
+        <locationX>858</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Portal_User</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AGRE_Community External User</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AGRE_Community Internal User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Portal_Public_Group</targetReference>
+            </connector>
+            <label>Portal User</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Role_Id_Exists</name>
+        <label>Role_Id_Exists ?</label>
+        <locationX>182</locationX>
+        <locationY>971</locationY>
+        <defaultConnector>
+            <targetReference>Copy_2_of_Assign_User_To_Public_Group_Role</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User Id</defaultConnectorLabel>
+        <rules>
+            <name>Group_Id_of_Role</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Company_Role_and_Subordinate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_User_To_Public_Group</targetReference>
+            </connector>
+            <label>Group Id of Role</label>
+        </rules>
+    </decisions>
+    <description>W-1697 - GENERAL CONDITIONS - How to manage new companies?</description>
+    <environments>Default</environments>
+    <interviewLabel>Assign Portal User To Portal Public Group {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assign Portal User To Portal Public Group</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Assign_User_To_Public_Group</name>
+        <label>Assign User To Public Group (Role)</label>
+        <locationX>50</locationX>
+        <locationY>1079</locationY>
+        <inputAssignments>
+            <field>GroupId</field>
+            <value>
+                <elementReference>Get_Portal_Public_Group.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>Get_Company_Role_and_Subordinate.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GroupMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Copy_2_of_Assign_User_To_Public_Group_Role</name>
+        <label>Assign User To Public Group (User)</label>
+        <locationX>314</locationX>
+        <locationY>1079</locationY>
+        <inputAssignments>
+            <field>GroupId</field>
+            <value>
+                <elementReference>Get_Portal_Public_Group.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GroupMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Company_Role_and_Subordinate</name>
+        <label>Get Company Role and Subordinate</label>
+        <locationX>380</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_existing_group_member_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>RoleAndSubordinates</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RelatedId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.UserRoleId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_existing_group_member_record</name>
+        <label>Get existing group member record</label>
+        <locationX>380</locationX>
+        <locationY>755</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_user_is_already_in_Public_Group</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>GroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Portal_Public_Group.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserOrGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserOrGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Company_Role_and_Subordinate.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>GroupMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Portal_Public_Group</name>
+        <label>Get Portal Public Group</label>
+        <locationX>611</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_public_group_exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Portal_Public_Group</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>732</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_User_Portal</targetReference>
+        </connector>
+        <filterFormula>(ISNEW() || {!$Record.IsActive} != {!$Record__Prior.IsActive})
+&amp;&amp; {!$Record.IsActive}</filterFormula>
+        <object>User</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

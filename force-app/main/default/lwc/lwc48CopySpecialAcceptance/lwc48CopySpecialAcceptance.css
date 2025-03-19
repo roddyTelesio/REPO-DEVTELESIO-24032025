@@ -1,0 +1,11 @@
+.slds-grow {
+    flex-grow: 1;
+}
+
+.fileSizeOK{
+    color:rgba(11, 92, 171, 1);
+  }
+  
+.exceedFileSize{
+    color: red;
+}

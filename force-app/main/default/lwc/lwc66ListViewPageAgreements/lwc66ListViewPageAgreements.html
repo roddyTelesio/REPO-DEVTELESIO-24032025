@@ -1,0 +1,148 @@
+<!--
+  @description       : 
+  @author            : Telesio - RRA
+  @group             : 
+  @last modified on  : 08-11-2024
+  Ticket id          : W- 2171
+  Ver   Date         Author                   Modification
+  1.0   08-11-2024   RRA    Initial Version
+-->
+<template>   
+    <div class="slds-box slds-border--top slds-border--left slds-border--right slds-border--bottom">
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name="standard:query_editor" size="small"></lightning-icon>&nbsp;&nbsp;
+                <lightning-formatted-text value={label.WorkingScope}></lightning-formatted-text>
+            </h3>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-combobox name="year"
+                                        label={label.UWYear}
+                                        value={selectedYear}
+                                        options={uwYearOpt}
+                                        onchange={handleChangeUWYr}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-combobox name="company"
+                                        label={label.PrincipalCedingCompany}
+                                        value={selectedComp}
+                                        options={cedingAccOpt}
+                                        onchange={handleChangeCedingComp}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+    </div>
+    
+    <div class="slds-box slds-border--top slds-border--left slds-border--right slds-border--bottom">
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name="action:filter" size="xx-small"></lightning-icon>&nbsp;&nbsp;
+                <lightning-formatted-text value="Filters"></lightning-formatted-text>
+            </h3>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-combobox name="program"
+                                        label="Program"
+                                        value={valueProgram}
+                                        disabled={disableProgram} 
+                                        options={programOptions}
+                                        onchange={handleChangeProgram}
+                                        placeholder="--None--">
+                    </lightning-combobox>
+                </lightning-layout-item>
+                
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-combobox name="recordType"
+                                        label="Record Type"
+                                        value={valueRecordType}
+                                        options={recordTypeOptions}
+                                        onchange={handleChangeRecordType}
+                                        placeholder="--None--">
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-combobox name="signingStatus"
+                                        label="Signing Status"
+                                        value={valueSigningStatus}
+                                        options={signingStatusOptions}
+                                        onchange={handleChangeSigningStatus}
+                                        placeholder="--None--">
+                    </lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            </lightning-card>
+        </div>
+
+</br>
+    <div class="slds-box slds-border--top slds-border--left slds-border--right slds-border--bottom">
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name="custom:custom100" size="small"></lightning-icon>&nbsp;&nbsp;
+                <lightning-formatted-text value={titleAgreement}></lightning-formatted-text>
+            </h3>
+            <lightning-input type="search" label="Search Agreements" value={searchString} onchange={handleSearch}></lightning-input>
+            <template if:true={isDataExists}>
+                <!--SHOWING DATATABLE-->
+                <lightning-button-group slot="actions">
+                    <!--RRA - Future improvement  <lightning-button label={label.New} onclick={handleCreateAgreementModal}></lightning-button>-->
+                    <!--<lightning-button label={label.Delete} onclick={handleRemoveAgreementInMass}></lightning-button>-->
+                </lightning-button-group>
+                
+                
+                <template if:true={spinner}>
+                    <div class="slds-p-around_x-large">
+                       <lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner> 
+                    </div>
+                </template>
+                <div style="height:500px">
+                    <c-Lwc66-Extented-Data-Table
+                    key-field="Id"
+                    data={recordsToDisplay}
+                    columns={columnsAgreement}
+                    enable-infinite-loading={enableInfiniteLoading}
+                    onloadmore={loadMoreDataAgreement}
+                    onrowaction={agreementHandleRowSelection}
+                    onchange={handleAgreementChanged}>
+                    </c-Lwc66-Extented-Data-Table>
+                </div>
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread" style="padding-top: 0.5em;">
+                    <!--RECORDS PER PAGE-->
+                    <div class="slds-col">
+                        <div class="slds-list_inline slds-p-bottom_xx-small">
+                            <label class="slds-text-color_weak slds-p-horizontal_x-small" for="recordsPerPage">Page Size:</label>
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="recordsPerPage" onchange={handleRecordsPerPage}>
+                                    <template for:each={pageSizeOptions} for:item="option">
+                                        <option key={option} value={option}>{option}</option>
+                                    </template>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--PAGE NAVIGATION-->
+                    <div class="slds-align_absolute-center" style="height:5rem">
+                        <lightning-button disabled={bDisableFirst} icon-name="utility:jump_to_left" label="First" class="slds-p-horizontal_x-small" alternative-text="first page" onclick={firstPage}></lightning-button>
+                        <lightning-button disabled={bDisableFirst} icon-name="utility:chevronleft" label="Previous" alternative-text="Previous" onclick={previousPage}></lightning-button>
+                        &nbsp;
+                        <span class="slds-badge">Showing {pageNumber} &nbsp;of&nbsp; {totalPages} &nbsp;&nbsp;Page(s)</span>
+                        &nbsp;
+                        <lightning-button disabled={bDisableLast} icon-name="utility:chevronright" label="Next" alternative-text="Next" onclick={nextPage} class="slds-p-horizontal_x-small" icon-position="right"></lightning-button>
+                        <lightning-button disabled={bDisableLast} icon-name="utility:jump_to_right" label="Last" alternative-text="last page" onclick={lastPage} icon-position="right"></lightning-button>
+                    </div>
+                    <!--TOTAL RECORDS-->
+                    <div class="slds-clearfix">
+                        <div class="slds-float_right">
+                            <span class="slds-badge"> Total Records: {totalRecords}</span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:false={isDataExists}>
+                <span class="slds-text-color_error"><lightning-formatted-text value={msgNoRecords}></lightning-formatted-text></span><br/>
+            </template>
+        </lightning-card>
+    </div>
+</template>

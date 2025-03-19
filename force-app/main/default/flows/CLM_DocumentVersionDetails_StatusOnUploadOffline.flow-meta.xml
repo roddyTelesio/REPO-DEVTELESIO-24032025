@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Agreement_Status</name>
+        <label>Set Agreement Status</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>Agreement.Apttus__Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Other Party Signatures</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Agreement.Apttus__Status_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Signatures</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Status_Of_Agreement</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Agreement_Status</name>
+        <label>Check Agreement Status</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>notRequest</defaultConnectorLabel>
+        <rules>
+            <name>is_request</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Agreement.Apttus__Status_Category__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Request</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Agreement</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Agreement.Apttus__Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>In Renewal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Agreement_Status</targetReference>
+            </connector>
+            <label>is request</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckBypass</name>
+        <label>CheckBypass</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Not allowed</defaultConnectorLabel>
+        <rules>
+            <name>Allowed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.DocumentVersionDetailsSettings__c.Can_Change_Status_On_UploadOffline__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Agreement</targetReference>
+            </connector>
+            <label>Allowed</label>
+        </rules>
+    </decisions>
+    <description>Automatically change status when an offline document is uploaded</description>
+    <environments>Default</environments>
+    <interviewLabel>CLM - Document Version Details - Status on Upload Offline {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Document Version Details - Status on Upload Offline</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Agreement</name>
+        <label>Get Agreement</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Agreement_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.TECH_AgreementId__c</elementReference>
+            </value>
+        </filters>
+        <object>Apttus__APTS_Agreement__c</object>
+        <outputReference>Agreement</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Apttus__Status__c</queriedFields>
+        <queriedFields>Apttus__Status_Category__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Status_Of_Agreement</name>
+        <label>Update Status Of Agreement</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <inputReference>Agreement</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckBypass</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Apttus__Action2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Import Offline Agreement</stringValue>
+            </value>
+        </filters>
+        <object>Apttus__DocumentVersionDetail__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Agreement</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Apttus__APTS_Agreement__c</objectType>
+    </variables>
+</Flow>

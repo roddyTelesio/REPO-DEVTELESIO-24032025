@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Pre_Prod_Date</name>
+        <label>Set Pre-Prod Date</label>
+        <locationX>314</locationX>
+        <locationY>803</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Pre_prod_Delivery_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TODAY_DATE</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_PROD_Date</name>
+        <label>Set PROD Date</label>
+        <locationX>578</locationX>
+        <locationY>803</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PROD_Delivery_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TODAY_DATE</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_ReOpened_Date</name>
+        <label>Set ReOpened Date</label>
+        <locationX>842</locationX>
+        <locationY>803</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ReopenedDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TODAY_DATE</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_UAT_Date</name>
+        <label>Set UAT Date</label>
+        <locationX>50</locationX>
+        <locationY>803</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.UAT_Delivery_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TODAY_DATE</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <customErrors>
+        <name>THROW_ERROR</name>
+        <label>THROW ERROR</label>
+        <locationX>842</locationX>
+        <locationY>395</locationY>
+        <connector>
+            <targetReference>Check_changes</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Access Denied: This field cannot be modified.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_changes</name>
+        <label>Check changes</label>
+        <locationX>974</locationX>
+        <locationY>587</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Status_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Status__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Work_Status</targetReference>
+            </connector>
+            <label>Status Changed ?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_user_modified_date_fields</name>
+        <label>Check if user modified date fields</label>
+        <locationX>974</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Check_changes</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Dates_modified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isDateChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>THROW_ERROR</targetReference>
+            </connector>
+            <label>Dates modified</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Work_Status</name>
+        <label>Check Work Status</label>
+        <locationX>578</locationX>
+        <locationY>695</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ready_in_UAT</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready in UAT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UAT_Delivery_Date__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_UAT_Date</targetReference>
+            </connector>
+            <label>Ready in UAT</label>
+        </rules>
+        <rules>
+            <name>Ready_in_Staging</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready in Staging</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Pre_prod_Delivery_Date__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Pre_Prod_Date</targetReference>
+            </connector>
+            <label>Ready in Staging</label>
+        </rules>
+        <rules>
+            <name>Prod_Delivery</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_PROD_Date</targetReference>
+            </connector>
+            <label>Prod Delivery</label>
+        </rules>
+        <rules>
+            <name>ReOpened</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reopened</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Reopened</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_ReOpened_Date</targetReference>
+            </connector>
+            <label>ReOpened</label>
+        </rules>
+    </decisions>
+    <description>W-2150 - WORKS - Automatically completion of Date depending of status changes</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>isDateChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCHANGED({!$Record.UAT_Delivery_Date__c}) || ISCHANGED({!$Record.Pre_prod_Delivery_Date__c}) || ISCHANGED({!$Record.PROD_Delivery_Date__c})  || ISCHANGED({!$Record.ReopenedDate__c})</expression>
+    </formulas>
+    <formulas>
+        <name>TODAY_DATE</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>[BEFORE SAVE] - Set Work Delivery Dates Automatically {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[BEFORE SAVE] - Set Work Delivery Dates Automatically</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_if_user_modified_date_fields</targetReference>
+        </connector>
+        <object>Work__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

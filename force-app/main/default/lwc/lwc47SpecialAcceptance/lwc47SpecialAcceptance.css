@@ -1,0 +1,11 @@
+.labelColour {
+    color: red;
+  }
+
+.fileSizeOK{
+  color:rgba(11, 92, 171, 1);
+}
+
+.exceedFileSize{
+  color: red;
+}

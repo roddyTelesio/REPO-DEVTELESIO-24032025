@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Original_DVD_Stage_Not_Equals_Final_DVD_Stage</name>
+        <label>Original DVD Stage Not Equals Final DVD Stage ?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_Stage_to_Final_Document_Version_Detail</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Apttus__FinalDocumentVersionDetail__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Apttus__OriginalDocumentVersionDetail__r.Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Apttus__FinalDocumentVersionDetail__r.Stage__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Final_Document_Version_Detail</targetReference>
+            </connector>
+            <label>Copy Stage to Final Document Version Detail</label>
+        </rules>
+    </decisions>
+    <description>BBH 03.06.2024 : W-2024 -  Copy Original DVD stage to final DVD stage after docx was reviewed</description>
+    <environments>Default</environments>
+    <interviewLabel>CLM - Review Cycle - Update DVD&apos;s Stage After Review {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Review Cycle - Update DVD&apos;s Stage After Review</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update final document version detail stage with the original document version detail&apos;s stage</description>
+        <name>Update_Final_Document_Version_Detail</name>
+        <label>Update Final Document Version Detail</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Apttus__FinalDocumentVersionDetail__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Stage__c</field>
+            <value>
+                <elementReference>$Record.Apttus__OriginalDocumentVersionDetail__r.Stage__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__DocumentVersionDetail__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Original_DVD_Stage_Not_Equals_Final_DVD_Stage</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Apttus__ReviewStatus__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Apttus__FinalDocumentVersionDetail__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Apttus__ReviewStatus__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <object>Apttus__ReviewCycle__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,16 @@
+<template>
+    <div class="dualListboxCmp">
+        <lightning-dual-listbox
+        id="selectOptions"
+        name="Select Options"
+        label=""
+        source-label="Works with No Priority"
+        selected-label="Sort Works with Priority Order"
+        options={listOptions}
+        value={defaultOptions}
+        onchange={handleChange}
+        size="10"
+    >
+    </lightning-dual-listbox>
+</div>
+</template>

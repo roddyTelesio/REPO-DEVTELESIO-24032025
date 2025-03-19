@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Clear orginal campaign from lookup field &quot;campaign&quot; and set same to technical field</description>
+        <name>UpdateClonedMinuteRecords</name>
+        <label>Update Cloned Minute Records</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Tech_OriginalCampaign__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Campaign__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Campaign__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NullValue</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Clear campaign original lookup and set same to technical fields</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NullValue</name>
+        <dataType>String</dataType>
+        <expression>NULL</expression>
+    </formulas>
+    <interviewLabel>Minute_Clear Original Campaign Lookup On Clone {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Minute_Clear Original Campaign Lookup On Clone</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateClonedMinuteRecords</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.Minute_FlowProcess_Bypass}) &amp;&amp; 
+{!$Record.Company__c} != null &amp;&amp;
+{!$Record.Campaign__c} != null</filterFormula>
+        <object>Minute__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_New_Name</name>
+        <label>Assign New Name</label>
+        <locationX>308</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Renewal_record.InitialAgreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Apttus__APTS_Contract_From__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Agreement</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>If_parent_agreement</name>
+        <label>If parent agreement</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Assign_New_Name</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Parent_Agreement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Renewal_record.Apttus__Version_Number__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <label>Yes Parent Agreement</label>
+        </rules>
+    </decisions>
+    <description>Copies initial agreement on newly renewed agreement</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formatedName</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Renewal_record.Name} +&apos; &apos;+ TEXT({!Get_Renewal_record.Apttus__Version_Number__c})</expression>
+    </formulas>
+    <formulas>
+        <name>FormattedName_TRIM</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!formatedName},80)</expression>
+    </formulas>
+    <formulas>
+        <name>splitAgreementNumber</name>
+        <dataType>String</dataType>
+        <expression>TRIM(RIGHT({!Get_Renewal_record.Apttus__FF_Agreement_Number__c}, LEN({!Get_Renewal_record.Apttus__FF_Agreement_Number__c}) - FIND(&quot;.&quot;, {!Get_Renewal_record.Apttus__FF_Agreement_Number__c})))</expression>
+    </formulas>
+    <interviewLabel>CLM - Agreement - Renewal Initial Agreement {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Agreement - Renewal Initial Agreement</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Renewal_record</name>
+        <label>Get Renewal record</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>If_parent_agreement</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Apttus__APTS_Contract_To__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Apttus__APTS_Agreement__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Agreement</name>
+        <label>Update Agreement</label>
+        <locationX>308</locationX>
+        <locationY>647</locationY>
+        <inputReference>Get_Renewal_record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Renewal_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Apttus__Relationship_To_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Is Renewal For</stringValue>
+            </value>
+        </filters>
+        <object>Apttus__APTS_Related_Agreement__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

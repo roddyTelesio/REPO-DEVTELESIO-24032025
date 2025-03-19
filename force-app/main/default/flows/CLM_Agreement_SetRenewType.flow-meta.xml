@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Renegotation_Assignment</name>
+        <label>Renegotation Assignment</label>
+        <locationX>220</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Renew_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Copy Final Version And Signed PDF</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_renew_Action_on_agreement</name>
+        <label>Set renew Action on agreement</label>
+        <locationX>176</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Renew_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Copy Final Version Only</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Negotiation</name>
+        <label>is Negotiation</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Is_normal_renewal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Program__r.TypeOfRenew__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard Renew</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_renew_Action_on_agreement</targetReference>
+            </connector>
+            <label>Is normal renewal</label>
+        </rules>
+        <rules>
+            <name>Negotiation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Program__r.TypeOfRenew__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LTA/TR Renegotiation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_renew_Action_on_agreement</targetReference>
+            </connector>
+            <label>ReNegotiation</label>
+        </rules>
+        <rules>
+            <name>is_identical</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Program__r.TypeOfRenew__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LTA/TR Identical Renew</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Renegotation_Assignment</targetReference>
+            </connector>
+            <label>is identical</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>CLM - Agreement - Set Renew Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Agreement - Set Renew Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Negotiation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Program__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Apttus__APTS_Agreement__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

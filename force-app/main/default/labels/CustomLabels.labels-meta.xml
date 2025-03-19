@@ -1,0 +1,3530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AAD</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AAD</shortDescription>
+        <value>AAD</value>
+    </labels>
+    <labels>
+        <fullName>AAL</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AAL</shortDescription>
+        <value>AAL</value>
+    </labels>
+    <labels>
+        <fullName>AXA_SA_Sender</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AXA SA Sender</shortDescription>
+        <value>0057S000002MoHqQAK</value>
+    </labels>
+    <labels>
+        <fullName>Accept</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Accept</shortDescription>
+        <value>Accept</value>
+    </labels>
+    <labels>
+        <fullName>Actions</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Actions</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>ActorReference</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ActorReference</shortDescription>
+        <value>Actor Reference</value>
+    </labels>
+    <labels>
+        <fullName>ActorReferenceIndex</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Actor Reference Index</shortDescription>
+        <value>90011200</value>
+    </labels>
+    <labels>
+        <fullName>Actor_New_Gen_User_guide</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Actor New Gen User guide</shortDescription>
+        <value>0697S000009PMmMQAW</value>
+    </labels>
+    <labels>
+        <fullName>Actor_ceding_portal_name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACTOR New Gen Ceding Portal</shortDescription>
+        <value>ACTOR New Gen Ceding Portal</value>
+    </labels>
+    <labels>
+        <fullName>Actor_portal_name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Actor portal name</shortDescription>
+        <value>ACTOR New Gen Portal</value>
+    </labels>
+    <labels>
+        <fullName>Add</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add</shortDescription>
+        <value>Add</value>
+    </labels>
+    <labels>
+        <fullName>AdvanceNotice</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Advance Notice</shortDescription>
+        <value>Advance Notice</value>
+    </labels>
+    <labels>
+        <fullName>All</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>All</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>Allocation_Key</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total allocation key for selected Covered Ceding Company should sum up to 100%</shortDescription>
+        <value>Total allocation key for selected Covered Ceding Company should sum up to 100%</value>
+    </labels>
+    <labels>
+        <fullName>AskForDeleteSAMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are going to delete the Special Acceptance. Do you want to continue?</shortDescription>
+        <value>You are going to delete the Special Acceptance. Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskForSubmitSAMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are going to submit the Special Acceptance.Submitting your Special Acceptanc</shortDescription>
+        <value>You are going to submit the Special Acceptance.Submitting your Special Acceptance to AGRe will prevent you to delete or modify it. Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivateLead</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Deactivate Lead</shortDescription>
+        <value>You are going to deactivate the selected Lead Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivatePlacement</fullName>
+        <categories>LWC23</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are going to deactivate the selected Placement Request(s). Do you want to co</shortDescription>
+        <value>You are going to deactivate the selected Placement Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivateProgram</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Deactivate Program</shortDescription>
+        <value>You are going to deactivate the selected Program(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivateQuote</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AskToDeactivateQuote</shortDescription>
+        <value>You are going to deactivate the selected Quote Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivateSection</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Deactivate Section</shortDescription>
+        <value>You are going to deactivate the selected Section(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeactivateTreaty</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Deactivate Treaty</shortDescription>
+        <value>You are going to deactivate the selected Treaty(ies). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeleteLead</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AskToDeleteLead</shortDescription>
+        <value>You are going to delete the Lead Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeletePlacement</fullName>
+        <categories>LWC23</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are going to delete the Placement Request(s). Do you want to continue?</shortDescription>
+        <value>You are going to delete the Placement Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeleteProgram</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Delete Program</shortDescription>
+        <value>You are going to delete the program(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeleteQuote</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Delete Quote</shortDescription>
+        <value>You are going to delete the Quote Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeleteSection</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Delete Section</shortDescription>
+        <value>You are going to delete the selected Section(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToDeleteTreaty</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Delete Treaty</shortDescription>
+        <value>You are going to delete the selected Treaty(ies). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivateLead</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask to Reactivate Lead Request</shortDescription>
+        <value>You are going to reactivate the selected Lead Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivatePlacement</fullName>
+        <categories>LWC23</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are going to reactivate the selected Placement Request(s). Do you want to co</shortDescription>
+        <value>You are going to reactivate the selected Placement Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivateProgram</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Reactivate Program</shortDescription>
+        <value>You are going to reactivate the selected Program(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivateQuote</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AskToReactivateQuote</shortDescription>
+        <value>You are going to reactivate the selected Quote Request(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivateSection</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Reactivate Section</shortDescription>
+        <value>You are going to reactivate the selected Section(s). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>AskToReactivateTreaty</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ask To Reactivate Treaty</shortDescription>
+        <value>You are going to reactivate the selected Treaty(ies). Do you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>Available</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available</shortDescription>
+        <value>Available</value>
+    </labels>
+    <labels>
+        <fullName>BRAlreadyExistForTreaty</fullName>
+        <categories>LWC24</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement/Lead request with the same Broker/Reinsurer already exists for this Tr</shortDescription>
+        <value>Placement/Lead request with the same Broker/Reinsurer already exists for this Treaty</value>
+    </labels>
+    <labels>
+        <fullName>BRAlreadyExists</fullName>
+        <categories>LWC24</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement/Lead request with the same Broker/Reinsurer already exists.</shortDescription>
+        <value>Placement/Lead request with the same Broker/Reinsurer already exists.</value>
+    </labels>
+    <labels>
+        <fullName>BRInactive</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Broker or Reinsurer selected is inactive</shortDescription>
+        <value>Broker or Reinsurer selected is inactive</value>
+    </labels>
+    <labels>
+        <fullName>BiologicalChemicalRisks</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Biological and Chemical Risks</shortDescription>
+        <value>Biological and Chemical Risks</value>
+    </labels>
+    <labels>
+        <fullName>CLM_SendToUGP_EmailAddresses</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLM_SendToUGP_EmailAddresses</shortDescription>
+        <value>agre.groupcoverteam@axa.com.invalid</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CannotCreateNewOption</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cannot create New Option from an Option</shortDescription>
+        <value>Cannot create New Option from an Option</value>
+    </labels>
+    <labels>
+        <fullName>CannotRemind_RequestNotSent</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You can&apos;t send a remind because at least one request is not &apos;Sent&apos;.</shortDescription>
+        <value>You can&apos;t send a remind because at least one request is not &apos;Sent&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>CannotRetrieveReinsurerStatusFilter</fullName>
+        <categories>LWC11</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error retrieving Reinsurer Status filter.</shortDescription>
+        <value>Error retrieving Reinsurer Status filter. Please contact your System Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>Capacity</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capacity</shortDescription>
+        <value>Capacity</value>
+    </labels>
+    <labels>
+        <fullName>CapacityPerRisk</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capacity per risk</shortDescription>
+        <value>Capacity per risk</value>
+    </labels>
+    <labels>
+        <fullName>CededLine</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ceded Line(s)</shortDescription>
+        <value>Ceded Line(s)</value>
+    </labels>
+    <labels>
+        <fullName>CededPremium</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ceded Premium</shortDescription>
+        <value>Ceded Premium</value>
+    </labels>
+    <labels>
+        <fullName>Ceded_Company_Empty</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No ceded company selected</shortDescription>
+        <value>At least one Covered Ceding Company must be selected</value>
+    </labels>
+    <labels>
+        <fullName>CedingCompanyInformedSuccessfully</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ceding Company informed successfully.</shortDescription>
+        <value>Ceding Company informed successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CessionAmount</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cession (amount)</shortDescription>
+        <value>Cession (amount)</value>
+    </labels>
+    <labels>
+        <fullName>CessionError</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cession Share% cannot be greater than 100%</shortDescription>
+        <value>Cession Share% cannot be greater than 100%</value>
+    </labels>
+    <labels>
+        <fullName>CessionPercent</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cession (%)</shortDescription>
+        <value>Cession (%)</value>
+    </labels>
+    <labels>
+        <fullName>CessionShare</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CessionShare</shortDescription>
+        <value>Cession Share %</value>
+    </labels>
+    <labels>
+        <fullName>CessionShareHelptext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cession share helptext</shortDescription>
+        <value>This field cannot be changed because there are Signing Request(s) present for this Treaty</value>
+    </labels>
+    <labels>
+        <fullName>CheckData</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check Data</shortDescription>
+        <value>Check Data</value>
+    </labels>
+    <labels>
+        <fullName>ChooseOneUpdate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChooseOneUpdate</shortDescription>
+        <value>Please choose only one contact to update!</value>
+    </labels>
+    <labels>
+        <fullName>Close</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CloseSigningErrorMsg</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Close Signing Error Message</shortDescription>
+        <value>You cannot perform this action as at least one the following fields is empty on at least one of your signing request : Broker Status, Retrocession Brokerage (%), Risk Carrier or Financial Entity</value>
+    </labels>
+    <labels>
+        <fullName>CocessionFiedsValueMissing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cocession Fieds Value Missing</shortDescription>
+        <value>A value is missing in the cocession fields. Please indicate a value in each field. The total must be equal to 100%</value>
+    </labels>
+    <labels>
+        <fullName>Comments</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>Conditions</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Conditions</shortDescription>
+        <value>Conditions</value>
+    </labels>
+    <labels>
+        <fullName>Copy</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Copy</shortDescription>
+        <value>Copy</value>
+    </labels>
+    <labels>
+        <fullName>CoveredCedingCompanies</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Covered Ceding Companies</shortDescription>
+        <value>Covered Ceding Companies</value>
+    </labels>
+    <labels>
+        <fullName>Currency</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Currency</shortDescription>
+        <value>Currency</value>
+    </labels>
+    <labels>
+        <fullName>Deactivate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deactivate</shortDescription>
+        <value>Deactivate</value>
+    </labels>
+    <labels>
+        <fullName>DeactivateSASuccessMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptances are cancelled.</shortDescription>
+        <value>Selected Special Acceptances are cancelled.</value>
+    </labels>
+    <labels>
+        <fullName>DecimalPlacesErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Decimal places error message for decimal numbers</shortDescription>
+        <value>You cannot add more than 6 decimals after the comma</value>
+    </labels>
+    <labels>
+        <fullName>DeductError</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deductions (%) cannot be greater than 100%</shortDescription>
+        <value>Deductions (%) cannot be greater than 100%</value>
+    </labels>
+    <labels>
+        <fullName>Deductible</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deductible</shortDescription>
+        <value>Deductible</value>
+    </labels>
+    <labels>
+        <fullName>Deductions</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deductions</shortDescription>
+        <value>Deductions</value>
+    </labels>
+    <labels>
+        <fullName>DeductionsPerc</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeductionsPerc</shortDescription>
+        <value>Deductions (%)</value>
+    </labels>
+    <labels>
+        <fullName>Delete</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>DeleteAgreementNotPermit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeleteAgreementNotPermit</shortDescription>
+        <value>Delete Action is only for Admin. Please contact them if necessary</value>
+    </labels>
+    <labels>
+        <fullName>DeleteDocumentSucessMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Documents Deleted Successfully.</shortDescription>
+        <value>Selected Documents Deleted Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Discard</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Discard</shortDescription>
+        <value>Discard changes</value>
+    </labels>
+    <labels>
+        <fullName>DocumentFieldValueMissing</fullName>
+        <categories>LWC14</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Field value missing</shortDescription>
+        <value>At least one of the field &quot;Group type&quot;, &quot;Document type&quot; or &quot;Phase&quot; has not be filled. Please fill it in order to save&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>DocumentNotAssigned</fullName>
+        <categories>LWC18</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DocumentNotAssigned</shortDescription>
+        <value>At least one document has not been assigned to a Broker/Reinsurer, please correct before sending!</value>
+    </labels>
+    <labels>
+        <fullName>DocumentSavedSuccessMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Documents Saved Successfully.</shortDescription>
+        <value>Documents Saved Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>EarlyTerminationDate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Early Termination Date</shortDescription>
+        <value>Early Termination Date</value>
+    </labels>
+    <labels>
+        <fullName>Earthquake_volcanic</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Earthquake, volcanic eruption, tidal wave, etc</shortDescription>
+        <value>Earthquake, volcanic eruption, tidal wave, etc</value>
+    </labels>
+    <labels>
+        <fullName>Edit</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>EmailAddressAlreadyExists</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email address already exists</shortDescription>
+        <value>Email address already exists</value>
+    </labels>
+    <labels>
+        <fullName>EmailNotFound</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>There is no email associated with this Account.</shortDescription>
+        <value>There is no email associated with this Account. Please contact your Client Executive.</value>
+    </labels>
+    <labels>
+        <fullName>EmailSentSuccessfully</fullName>
+        <categories>LWC29</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email sent successfully</shortDescription>
+        <value>Email sent successfully</value>
+    </labels>
+    <labels>
+        <fullName>EmptyPool</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pool empty</shortDescription>
+        <value>At least one Pool must be selected</value>
+    </labels>
+    <labels>
+        <fullName>EnterExpectedAnswerDate</fullName>
+        <categories>LWC18</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please enter a value for Expected Answer Date.</shortDescription>
+        <value>Please enter a value for Expected Answer Date.</value>
+    </labels>
+    <labels>
+        <fullName>EnterValidEmail</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please enter a valid email address</shortDescription>
+        <value>Please enter a valid email address</value>
+    </labels>
+    <labels>
+        <fullName>EpidemicPandemicRisks</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Epidemic and Pandemic Risks</shortDescription>
+        <value>Epidemic and Pandemic Risks</value>
+    </labels>
+    <labels>
+        <fullName>ErrorMsgACRDeletion</fullName>
+        <categories>AP64</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prevent ACR Deletion For Activated Contacts</shortDescription>
+        <value>You do not have the necessary right to delete this relationship. Please contact you&apos;re system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>EvenLimit</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Even Limit</shortDescription>
+        <value>Even Limit</value>
+    </labels>
+    <labels>
+        <fullName>ExcessLossSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Excess of Loss Section</shortDescription>
+        <value>Excess of Loss Section</value>
+    </labels>
+    <labels>
+        <fullName>ExclusionCatastrophicGuarantee</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exclusion of Catastrophic Guarantee</shortDescription>
+        <value>Exclusion of Catastrophic Guarantee</value>
+    </labels>
+    <labels>
+        <fullName>ExclusionCatastrophicGuarantees</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exclusion of Catastrophic Guarantees</shortDescription>
+        <value>Exclusion of Catastrophic Guarantees</value>
+    </labels>
+    <labels>
+        <fullName>Exclusion_Catastrophy</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exclusion_Catastrophy</shortDescription>
+        <value>At least one Exclusion Catastrophy must be selected when Exclusion of Catastrophic Guarantee = Yes</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedAnswerDateReached</fullName>
+        <categories>LWC29</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The expected answer date has been reached. Please get in touch with your contact</shortDescription>
+        <value>The expected answer date has been reached. Please get in touch with your contact</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedDP</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expected DP (%)</shortDescription>
+        <value>Expected DP (%)</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedMDP</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expected MDP (%)</shortDescription>
+        <value>Expected MDP (%)</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedMP</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expected MP (%)</shortDescription>
+        <value>Expected MP (%)</value>
+    </labels>
+    <labels>
+        <fullName>ExpiryDate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expiry Date</shortDescription>
+        <value>Expiry Date</value>
+    </labels>
+    <labels>
+        <fullName>ExpiryDate_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expiry Date must be greater than Inception Date</shortDescription>
+        <value>Expiry Date must be greater than Inception Date</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionAuthorizedCLM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Extension Authorized For CLM</shortDescription>
+        <value>doc,docx,docm,pdf</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRECommunityExternalUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized AGRE_Community External User</shortDescription>
+        <value>pdf,msg,docx,xlsx,doc,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRECommunityInternalUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized AGRE_Community Internal User</shortDescription>
+        <value>zip,pdf,png,pptx,msg,xlsx,docx,doc,txt,jpg</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRESystemAdmin</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized AGRE System Admin</shortDescription>
+        <value>png,pdf,xlsx,docx,zip,doc,xlsm,pptx,msg,jpg,xlsb,mp4,xls,csv,7z,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRE_ActorBasicSFPlatformAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized AGRE_Actor Basic SF Platform Access</shortDescription>
+        <value>pdf,docx,zip,doc,msg,png,xlsx,xls,pptx,xlsm,xlsb,7z,jpg,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRE_ActorBasicSalesforceAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized AGRE_Actor Basic Salesforce Access</shortDescription>
+        <value>pdf,docx,zip,doc,msg,png,xlsx,xls,pptx,xlsm,xlsb,7z,jpg,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedAGRE_Actor_C_E</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized for AGRE Actor C.E</shortDescription>
+        <value>pdf,docx,zip,doc,msg,png,xlsx,xls,pptx,xlsm,xlsb,7z,jpg,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedActorCEAXAXL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized For AGRE Actor C.E AXA XL</shortDescription>
+        <value>pdf,docx,zip,doc,msg,png,xlsx,xls,pptx,xlsm,xlsb,7z,jpg,txt</value>
+    </labels>
+    <labels>
+        <fullName>ExtensionNotAuthorizedSystemAdministrator</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File Extension Authorized System Administrator</shortDescription>
+        <value>xlsm,pdf,xlsx,docx,png,doc,svg,pptx,jpg,jpeg,xls,mp4,csv,msg,mov,txt,zip</value>
+    </labels>
+    <labels>
+        <fullName>Flood</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Flood</shortDescription>
+        <value>Flood</value>
+    </labels>
+    <labels>
+        <fullName>FloodWindstormEarthquakeTerrorism</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>At least one field between Flood, Windstorm, Earthquake and Terrorism Limit must</shortDescription>
+        <value>At least one field between Flood, Windstorm, Earthquake and Terrorism Limit must be completed</value>
+    </labels>
+    <labels>
+        <fullName>FormEntriesInvalid</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the invalid form entries and try again.</shortDescription>
+        <value>Please update the invalid form entries and try again.</value>
+    </labels>
+    <labels>
+        <fullName>Getting_Started_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Started Header</shortDescription>
+        <value>Getting Started</value>
+    </labels>
+    <labels>
+        <fullName>Getting_Started_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Started Message</shortDescription>
+        <value>Please select an Apex class from the list on the left. You can then assign Profiles and Permission Sets. Classes marked with a red flag are unassigned, meaning that those classes will be unavailable to Lightning Web Components and Aura.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;&lt;i&gt;* The tool will not reveal Apex classes inside managed packages.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Head_of_GRID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Head of GRID</shortDescription>
+        <value>Head of GRID</value>
+    </labels>
+    <labels>
+        <fullName>Hurricane_Windstorm</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hurricane, Windstorm, etc</shortDescription>
+        <value>Hurricane, Windstorm, etc</value>
+    </labels>
+    <labels>
+        <fullName>InceptionDate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inception Date</shortDescription>
+        <value>Inception Date</value>
+    </labels>
+    <labels>
+        <fullName>InceptionDate_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inception date should match the Underwriting Year.</shortDescription>
+        <value>Inception date should match the Underwriting Year.</value>
+    </labels>
+    <labels>
+        <fullName>InclusionCatastrophicGuarantee</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inclusion of Catastrophic Guarantee</shortDescription>
+        <value>Inclusion of Catastrophic Guarantee</value>
+    </labels>
+    <labels>
+        <fullName>InclusionCatastrophicGuarantees</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inclusion of Catastrophic Guarantees</shortDescription>
+        <value>Inclusion of Catastrophic Guarantees</value>
+    </labels>
+    <labels>
+        <fullName>Inclusion_Catastrophy</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inclusion_Catastrophy</shortDescription>
+        <value>At least one Inclusion Catastrophy must be selected when Inclusion of Catastrophic Guarantee = Yes</value>
+    </labels>
+    <labels>
+        <fullName>InformationAboutProgram</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Information about Program</shortDescription>
+        <value>Information about Program</value>
+    </labels>
+    <labels>
+        <fullName>InformationAboutSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Information about Section</shortDescription>
+        <value>Information about Section</value>
+    </labels>
+    <labels>
+        <fullName>Invisible_Class_Flag</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invisible Class Flag</shortDescription>
+        <value>Class not visible to LWC/Aura</value>
+    </labels>
+    <labels>
+        <fullName>LTA</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA</shortDescription>
+        <value>LTA</value>
+    </labels>
+    <labels>
+        <fullName>LTAInception_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTAInception date Error</shortDescription>
+        <value>LTA Inception Date should be less than Expiry Date.</value>
+    </labels>
+    <labels>
+        <fullName>LTAInformation</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA Information</shortDescription>
+        <value>LTA Information</value>
+    </labels>
+    <labels>
+        <fullName>LTA_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error LTA</shortDescription>
+        <value>LTA Inception Date should be less than Early Termination Date.</value>
+    </labels>
+    <labels>
+        <fullName>LTA_ExpiryDate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA Expiry Date</shortDescription>
+        <value>LTA Expiry Date</value>
+    </labels>
+    <labels>
+        <fullName>LTA_InceptionDate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA Inception Date</shortDescription>
+        <value>LTA Inception Date</value>
+    </labels>
+    <labels>
+        <fullName>LTA_Renegotiation</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA Renegotiation</shortDescription>
+        <value>LTA Renegotiation</value>
+    </labels>
+    <labels>
+        <fullName>LTA_TR_Identical_Review</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA/TR Identical Review</shortDescription>
+        <value>LTA/TR Identical Review</value>
+    </labels>
+    <labels>
+        <fullName>LTA_TR_Renegotiation</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA/TR Renegotiation</shortDescription>
+        <value>LTA/TR Renegotiation</value>
+    </labels>
+    <labels>
+        <fullName>LTA_minPeriod</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The minimum LTA period must be 2 years.</shortDescription>
+        <value>The minimum LTA period must be 2 years.</value>
+    </labels>
+    <labels>
+        <fullName>LTAhelpText</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LTA helptext</shortDescription>
+        <value>This field cannot be changed because there are Lead Request(s) present for this Program</value>
+    </labels>
+    <labels>
+        <fullName>Layer</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Layer</shortDescription>
+        <value>Layer</value>
+    </labels>
+    <labels>
+        <fullName>LayerNumber</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LayerNumber</shortDescription>
+        <value>Layer Number</value>
+    </labels>
+    <labels>
+        <fullName>LeadRequestsAlreadyAvailableForTreaty</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Requests are already created for available Treaties</shortDescription>
+        <value>Lead Requests are already created for available Treaties.</value>
+    </labels>
+    <labels>
+        <fullName>LeadRequestsCreatedSuccessfully</fullName>
+        <categories>LWC21</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Requests created successfully.</shortDescription>
+        <value>Lead Requests created successfully.</value>
+    </labels>
+    <labels>
+        <fullName>LeadRequestsTypeIsAlready_sent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Requests Type is Already sent</shortDescription>
+        <value>You cannot perform this action as at least one Lead Request has been sent or answered</value>
+    </labels>
+    <labels>
+        <fullName>Limit</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Limit</shortDescription>
+        <value>Limit</value>
+    </labels>
+    <labels>
+        <fullName>LimitType</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Limit Type</shortDescription>
+        <value>Limit Type</value>
+    </labels>
+    <labels>
+        <fullName>LimitUnlimitedErrMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Either Limit or Unlimited must be completed.</shortDescription>
+        <value>Either Limit or Unlimited must be completed.</value>
+    </labels>
+    <labels>
+        <fullName>LineAmount</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Line (amount)</shortDescription>
+        <value>Line (amount)</value>
+    </labels>
+    <labels>
+        <fullName>LoB</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>L.o.B</shortDescription>
+        <value>L.o.B</value>
+    </labels>
+    <labels>
+        <fullName>LossAttachment</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LossAttachment</shortDescription>
+        <value>Loss Attachment</value>
+    </labels>
+    <labels>
+        <fullName>LossDeposit</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss Deposit</shortDescription>
+        <value>Loss Deposit</value>
+    </labels>
+    <labels>
+        <fullName>LossDepositLevel</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss Deposit Level</shortDescription>
+        <value>Loss Deposit Level</value>
+    </labels>
+    <labels>
+        <fullName>LossDepositMode</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss Deposit Mode</shortDescription>
+        <value>Loss Deposit Mode</value>
+    </labels>
+    <labels>
+        <fullName>LossDept_Program</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss deposit mode is required when loss deposit level is Program</shortDescription>
+        <value>Loss deposit mode is required when loss deposit level is Program</value>
+    </labels>
+    <labels>
+        <fullName>MacroLOB</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Macro L.O.B</shortDescription>
+        <value>Macro L.O.B</value>
+    </labels>
+    <labels>
+        <fullName>MaxLimitAmount</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Max. limit amount</shortDescription>
+        <value>Max. limit amount</value>
+    </labels>
+    <labels>
+        <fullName>Max_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Maximum Limit Amount cannot be less than Minimum Limit Amount</shortDescription>
+        <value>Maximum Limit Amount cannot be less than Minimum Limit Amount</value>
+    </labels>
+    <labels>
+        <fullName>MethodOfDistribution</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Method of Distribution of the Premium</shortDescription>
+        <value>Method of Distribution of the Premium</value>
+    </labels>
+    <labels>
+        <fullName>MinLimitAmount</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Min. limit amount</shortDescription>
+        <value>Min. limit amount</value>
+    </labels>
+    <labels>
+        <fullName>Min_Error</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Minimum Limit Amount cannot be greater than Maximum Limit Amount</shortDescription>
+        <value>Minimum Limit Amount cannot be greater than Maximum Limit Amount</value>
+    </labels>
+    <labels>
+        <fullName>MissingRequiredFieldMarketSubmission</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>At least one mandatory field is empty, please complete it before trying to send</shortDescription>
+        <value>At least one mandatory field is empty, please complete it before trying to send again.</value>
+    </labels>
+    <labels>
+        <fullName>Missing_Order</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Missing_Order</shortDescription>
+        <value>Please indicate the order of signatories : 1 is the first person who will sign the contract, etc.</value>
+    </labels>
+    <labels>
+        <fullName>ModalButton1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ModalButton1</shortDescription>
+        <value>Stay on the Home page</value>
+    </labels>
+    <labels>
+        <fullName>ModalButton2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ModalButton2</shortDescription>
+        <value>Go to the renewed program</value>
+    </labels>
+    <labels>
+        <fullName>ModalButton3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ModalButton3</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ModalContent1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ModalContent1</shortDescription>
+        <value>Your Program has been renewed</value>
+    </labels>
+    <labels>
+        <fullName>ModalTitle1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ModalTitle1</shortDescription>
+        <value>Program Renewed</value>
+    </labels>
+    <labels>
+        <fullName>Modify</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Modify</shortDescription>
+        <value>Modify</value>
+    </labels>
+    <labels>
+        <fullName>MoreInforRequiredStatus</fullName>
+        <categories>LWC54;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>More Infor Required Status in SA</shortDescription>
+        <value>More Infor Required</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>Nature</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Nature</shortDescription>
+        <value>Nature</value>
+    </labels>
+    <labels>
+        <fullName>New</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>NewCoveredCedingCompany</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Covered Ceding Company</shortDescription>
+        <value>New Covered Ceding Company</value>
+    </labels>
+    <labels>
+        <fullName>NewOption</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Option</shortDescription>
+        <value>New Option</value>
+    </labels>
+    <labels>
+        <fullName>NewProgram</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Program</shortDescription>
+        <value>New Program</value>
+    </labels>
+    <labels>
+        <fullName>NewSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Section</shortDescription>
+        <value>New Section</value>
+    </labels>
+    <labels>
+        <fullName>NewTreaty</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Treaty</shortDescription>
+        <value>New Treaty</value>
+    </labels>
+    <labels>
+        <fullName>No</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>NoAssignedEmailForPool</fullName>
+        <categories>LWC18</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Atleast one pool does not have an assigned Email address</shortDescription>
+        <value>Atleast one pool does not have an assigned Email address</value>
+    </labels>
+    <labels>
+        <fullName>NoCedingContactAvailable</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Ceding Contact is available.</shortDescription>
+        <value>No Ceding Contact is available.</value>
+    </labels>
+    <labels>
+        <fullName>NoChanges</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Changes have been done</shortDescription>
+        <value>No Changes have been done</value>
+    </labels>
+    <labels>
+        <fullName>NoContactAvailable</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Contact is available.</shortDescription>
+        <value>No Contact is available.</value>
+    </labels>
+    <labels>
+        <fullName>NoContactSelected</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoContactSelected</shortDescription>
+        <value>No contact has been selected!</value>
+    </labels>
+    <labels>
+        <fullName>NoContractualDocumentAttached</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>There is no contractual document attached, please add at least one</shortDescription>
+        <value>There is no contractual document attached, please add at least one</value>
+    </labels>
+    <labels>
+        <fullName>NoDocumentAvailable</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Document is available</shortDescription>
+        <value>No Document is available</value>
+    </labels>
+    <labels>
+        <fullName>NoFileIsFound</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No file is found.</shortDescription>
+        <value>No file is found.</value>
+    </labels>
+    <labels>
+        <fullName>NoLeadPresentForProgram</fullName>
+        <categories>LWC23</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>There are no Lead Requests for this Program. Please go back to Lead phase to cre</shortDescription>
+        <value>There are no Lead Requests for this Program. Please go back to Lead phase to create the requests.</value>
+    </labels>
+    <labels>
+        <fullName>NoLeadRequestSelected</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Lead Requests selected</shortDescription>
+        <value>No Lead Requests selected</value>
+    </labels>
+    <labels>
+        <fullName>NoNeedToAskForValidation</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You don&apos;t need to ask for a validation and you can just send your Signing Reques</shortDescription>
+        <value>You don&apos;t need to ask for a validation and you can just send your Signing Requests</value>
+    </labels>
+    <labels>
+        <fullName>NoProgramIsSelectedForSA</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Program is selected.</shortDescription>
+        <value>No Program is selected.</value>
+    </labels>
+    <labels>
+        <fullName>NoQuoteRequestsSelected</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Quote Requests Selected</shortDescription>
+        <value>No Quote Requests selected</value>
+    </labels>
+    <labels>
+        <fullName>NoRegisteredReinstatement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Registered Reinstatement</shortDescription>
+        <value>There is no registered reinstatement. Please add at least one or change the Reinstatements value as None</value>
+    </labels>
+    <labels>
+        <fullName>NoRequest</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Signing Requests existed</shortDescription>
+        <value>No Signing Requests existed</value>
+    </labels>
+    <labels>
+        <fullName>NoSigningRequestSelected</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Signing Request is selected.</shortDescription>
+        <value>No Signing Request is selected.</value>
+    </labels>
+    <labels>
+        <fullName>NoSigningRequestSetupPresent</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Signing Request with Reinsurer Status Setup is present</shortDescription>
+        <value>No Signing Request with Reinsurer Status Setup is present</value>
+    </labels>
+    <labels>
+        <fullName>NoSigningRequest_ReinsurerStatus_Sent_or_Timeout</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Signing Request with Reinsurer Status Sent or Timeout is selected.</shortDescription>
+        <value>No Signing Request with Reinsurer Status Sent or Timeout is selected.</value>
+    </labels>
+    <labels>
+        <fullName>NoSubSectionInSection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No SubSection In Section</shortDescription>
+        <value>Be careful, you did not register any Subsection on these sections.</value>
+    </labels>
+    <labels>
+        <fullName>NoSubsectionTickedAsPrincipale</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Subsection Ticked As Principale</shortDescription>
+        <value>You did not tick a Subsection as the Principal one</value>
+    </labels>
+    <labels>
+        <fullName>NoTreatiesSelected</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoTreatiesSelected</shortDescription>
+        <value>No Treaties selected</value>
+    </labels>
+    <labels>
+        <fullName>NoTreatySelected</fullName>
+        <categories>LWC39</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Treaty is selected.</shortDescription>
+        <value>No Treaty is selected.</value>
+    </labels>
+    <labels>
+        <fullName>NonTraditionalReinsurance_FiniteRe</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non-Traditional Reinsurance and/or Finite Re</shortDescription>
+        <value>Non-Traditional Reinsurance and/or Finite Re</value>
+    </labels>
+    <labels>
+        <fullName>NotAnsweredStatus</fullName>
+        <categories>LWC54;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not Answered Status in SA</shortDescription>
+        <value>Not Answered</value>
+    </labels>
+    <labels>
+        <fullName>NotManagedByAgre</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotManagedByAgre</shortDescription>
+        <value>Not Managed By AXA SA</value>
+    </labels>
+    <labels>
+        <fullName>Notify_webXL_email_address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Notify webXL email address</shortDescription>
+        <value>AGPC_TA_Renouvellement@axa.com</value>
+    </labels>
+    <labels>
+        <fullName>NuclearBiologicalChemicalTerrorism</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Nuclear, Biological and Chemical Terrorism</shortDescription>
+        <value>Nuclear, Biological and Chemical Terrorism</value>
+    </labels>
+    <labels>
+        <fullName>NuclearRisks</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Nuclear Risks</shortDescription>
+        <value>Nuclear Risks</value>
+    </labels>
+    <labels>
+        <fullName>Number</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Section Number</shortDescription>
+        <value>Number</value>
+    </labels>
+    <labels>
+        <fullName>NumberErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User tries to enter decimal number for a whole number field type</shortDescription>
+        <value>You cannot enter decimals</value>
+    </labels>
+    <labels>
+        <fullName>Open_Setup</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Open_Setup</shortDescription>
+        <value>Open Setup</value>
+    </labels>
+    <labels>
+        <fullName>Option</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Option</shortDescription>
+        <value>Option</value>
+    </labels>
+    <labels>
+        <fullName>OriginalYearNotInRightFormat</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Original Uw Year is not of the right format (YYYY)</shortDescription>
+        <value>Original Uw Year is not of the right format (YYYY)</value>
+    </labels>
+    <labels>
+        <fullName>Other_risks</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other risks such as freese, hall, strong wind</shortDescription>
+        <value>Other risks such as freese, hall, strong wind</value>
+    </labels>
+    <labels>
+        <fullName>Others</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Others</shortDescription>
+        <value>Others</value>
+    </labels>
+    <labels>
+        <fullName>PCCInactive</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The Principal Ceding Company is inactive</shortDescription>
+        <value>The Principal Ceding Company is inactive</value>
+    </labels>
+    <labels>
+        <fullName>PCCInactiveCopyNotAllowed</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The Principal Ceding Company is inactive. Copy is not allowed.</shortDescription>
+        <value>The Principal Ceding Company is inactive. Copy is not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>PendingStatus</fullName>
+        <categories>LWC54;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pending Status in SA</shortDescription>
+        <value>Pending</value>
+    </labels>
+    <labels>
+        <fullName>Permission_Sets</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Permission Sets</shortDescription>
+        <value>Permission Sets</value>
+    </labels>
+    <labels>
+        <fullName>PlacementError</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement Share% cannot be greater than 100%</shortDescription>
+        <value>Placement Share% cannot be greater than 100%</value>
+    </labels>
+    <labels>
+        <fullName>PlacementShare</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PlacementShare</shortDescription>
+        <value>Placement Share (%)</value>
+    </labels>
+    <labels>
+        <fullName>PlacementShareTypeHelpText</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement share helptext</shortDescription>
+        <value>This field cannot be changed because there are Signing Request(s) present for this Treaty</value>
+    </labels>
+    <labels>
+        <fullName>PlacementTableDeletedSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement Table deleted Successfully.</shortDescription>
+        <value>Placement Table deleted Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>PlacementTableLoadedSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement table loaded successfully.</shortDescription>
+        <value>Placement table loaded successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Placement_stage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement stage</shortDescription>
+        <value>Placement</value>
+    </labels>
+    <labels>
+        <fullName>Pooled</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pooled</shortDescription>
+        <value>Pooled</value>
+    </labels>
+    <labels>
+        <fullName>Pools</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pools</shortDescription>
+        <value>Pools</value>
+    </labels>
+    <labels>
+        <fullName>PremiumDeposit</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PremiumDeposit</shortDescription>
+        <value>Premium Deposit</value>
+    </labels>
+    <labels>
+        <fullName>Premium_exceeds_authorization_for_signing</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The Premium exceeds your authorization for signing, please click the &apos;Ask for Va</shortDescription>
+        <value>The Premium exceeds your authorization for signing, please click the &apos;Ask for Validation&apos; button</value>
+    </labels>
+    <labels>
+        <fullName>PrincipalCedingCompany</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Principal Ceding Company</shortDescription>
+        <value>Principal Ceding Company</value>
+    </labels>
+    <labels>
+        <fullName>Profiles</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profiles</shortDescription>
+        <value>Profiles</value>
+    </labels>
+    <labels>
+        <fullName>ProgName_Exists</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program Name exists.</shortDescription>
+        <value>Program Name already exists for this underwriting year.</value>
+    </labels>
+    <labels>
+        <fullName>ProgName_Unchanged</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program Name has not been changed.</shortDescription>
+        <value>Program Name has not been changed.</value>
+    </labels>
+    <labels>
+        <fullName>Program</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program Name</shortDescription>
+        <value>Program</value>
+    </labels>
+    <labels>
+        <fullName>ProgramName</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program Name</shortDescription>
+        <value>Program Name</value>
+    </labels>
+    <labels>
+        <fullName>ProgramNameCopy</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message when copying a program</shortDescription>
+        <value>The name of the program should be modified</value>
+    </labels>
+    <labels>
+        <fullName>ProgramNotRenewed</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This Special Acceptance cannot be renewed as its program has not been renewed ye</shortDescription>
+        <value>This Special Acceptance cannot be renewed as its program has not been renewed yet.</value>
+    </labels>
+    <labels>
+        <fullName>ProgramRenewedSuccessfully</fullName>
+        <categories>LWC39</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program Renewed Successfully.</shortDescription>
+        <value>Program Renewed Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Program_Created</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program created.</shortDescription>
+        <value>Program Created Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Program_Updated</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Program updated.</shortDescription>
+        <value>Program Updated Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Programs</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Programs</shortDescription>
+        <value>Programs</value>
+    </labels>
+    <labels>
+        <fullName>QRTypeHelpText</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QR Type Help Text (Section)</shortDescription>
+        <value>This field cannot be changed because there are Quote Request(s) present for this Section</value>
+    </labels>
+    <labels>
+        <fullName>QRdisabled</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Request Type field disabled</shortDescription>
+        <value>This field cannot be changed because there are Quote Request(s) present for this Section</value>
+    </labels>
+    <labels>
+        <fullName>QuotaShareSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quota Share Section</shortDescription>
+        <value>Quota Share Section</value>
+    </labels>
+    <labels>
+        <fullName>QuoteRequestType</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Request Type</shortDescription>
+        <value>Quote Request Type</value>
+    </labels>
+    <labels>
+        <fullName>QuoteRequestsCreatedSuccessfully</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Requests Created Successfully.</shortDescription>
+        <value>Quote Requests Created Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteTableApexError</fullName>
+        <categories>QuoteTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteTableApexError</shortDescription>
+        <value>An unexpected error occured. Please contact your administrator.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteTableNewSheet</fullName>
+        <categories>QuoteTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteTableNewSheet</shortDescription>
+        <value>Sheet Name</value>
+    </labels>
+    <labels>
+        <fullName>QuoteTableTemplateSheetType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Table template sheet type label</shortDescription>
+        <value>Template Sheet Type</value>
+    </labels>
+    <labels>
+        <fullName>QuoteTableUniqueTabName</fullName>
+        <categories>QuoteTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteTableUniqueTabName</shortDescription>
+        <value>Tab names must be unique. Please enter a unique tab name.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteTableUwYear</fullName>
+        <categories>QuoteTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Underwriting year on quote table filter</shortDescription>
+        <value>2025</value>
+    </labels>
+    <labels>
+        <fullName>Reactivate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reactivate</shortDescription>
+        <value>Reactivate</value>
+    </labels>
+    <labels>
+        <fullName>ReactivateSASuccessMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptances are reactivated.</shortDescription>
+        <value>Selected Special Acceptances are reactivated.</value>
+    </labels>
+    <labels>
+        <fullName>Reinstatement</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reinstatement</shortDescription>
+        <value>Reinstatements</value>
+    </labels>
+    <labels>
+        <fullName>Reinstatement_Empty</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>At least one Reinstatement must be added.</shortDescription>
+        <value>At least one Reinstatement must be added.</value>
+    </labels>
+    <labels>
+        <fullName>Reinstatements</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reinstatement(s)</shortDescription>
+        <value>Reinstatement(s)</value>
+    </labels>
+    <labels>
+        <fullName>RelatedSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Related Section</shortDescription>
+        <value>Related Section</value>
+    </labels>
+    <labels>
+        <fullName>Related_to</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Related Section Number</shortDescription>
+        <value>Related to</value>
+    </labels>
+    <labels>
+        <fullName>RemindEmailSendSuccessfully</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remind email sent successfully.</shortDescription>
+        <value>Remind email sent successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Renew</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Renew</shortDescription>
+        <value>Renew</value>
+    </labels>
+    <labels>
+        <fullName>RenewedFromSection_Option</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Renewed from Section-Option</shortDescription>
+        <value>Renewed from Section-Option</value>
+    </labels>
+    <labels>
+        <fullName>Report_CAT_Programs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Report_CAT_Programs</shortDescription>
+        <value>SELECT Id from Program__c where (UwYear__c=&apos;2024&apos; OR UwYear__c=&apos;2025&apos;) and Macro_L_O_B__c= &apos;25002&apos;</value>
+    </labels>
+    <labels>
+        <fullName>RequestSavedSuccessfully</fullName>
+        <categories>LWC29</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request saved successfully.</shortDescription>
+        <value>Request saved successfully.</value>
+    </labels>
+    <labels>
+        <fullName>RequestsSavedSuccessfully</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Requests saved successfully</shortDescription>
+        <value>Requests saved successfully</value>
+    </labels>
+    <labels>
+        <fullName>RequiredFieldMissingSA</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please complete required fields, update the invalid form entries and try again.</shortDescription>
+        <value>Please complete required fields, update the invalid form entries and try again.</value>
+    </labels>
+    <labels>
+        <fullName>RequiredRequestTypeMissing</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required Request Type values are missing</shortDescription>
+        <value>Required Request Type values are missing</value>
+    </labels>
+    <labels>
+        <fullName>Required_Fields</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message for required fields</shortDescription>
+        <value>Required Fields are missing.</value>
+    </labels>
+    <labels>
+        <fullName>RespondOnBehalfSavedSuccessfully</fullName>
+        <categories>LWC52</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Respond on Behalf saved successfully.</shortDescription>
+        <value>Respond on Behalf saved successfully.</value>
+    </labels>
+    <labels>
+        <fullName>RespondOnBehalfSentSuccessfully</fullName>
+        <categories>LWC52</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Respond on Behalf sent successfully.</shortDescription>
+        <value>Respond on Behalf sent successfully.</value>
+    </labels>
+    <labels>
+        <fullName>RetainToLeadError</fullName>
+        <categories>lwc01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RetainToLeadError</shortDescription>
+        <value>A Lead request is already created for this treaty. If you need to change the sections retained to Lead, please delete your Lead request before.</value>
+    </labels>
+    <labels>
+        <fullName>RetainToLeadSameFamily</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RetainToLeadSameFamily</shortDescription>
+        <value>Only one Section-Option of the same family can be retained. You have selected more than one Section-Option of a family. Please review your selection.</value>
+    </labels>
+    <labels>
+        <fullName>RetainedToLead</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retained to Lead</shortDescription>
+        <value>Retained to Lead</value>
+    </labels>
+    <labels>
+        <fullName>RetainedToLeadSectionsSuccessfully</fullName>
+        <categories>LWC01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retained To Lead Sections saved successfully.</shortDescription>
+        <value>Retained To Lead Sections saved successfully.</value>
+    </labels>
+    <labels>
+        <fullName>RetensionAmount</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retension (amount)</shortDescription>
+        <value>Retension (amount)</value>
+    </labels>
+    <labels>
+        <fullName>Retention</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retention</shortDescription>
+        <value>Retention</value>
+    </labels>
+    <labels>
+        <fullName>RetentionLine</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retention (Line)</shortDescription>
+        <value>Retention (Line)</value>
+    </labels>
+    <labels>
+        <fullName>RetentionPercent</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retention (%)</shortDescription>
+        <value>Retention (%)</value>
+    </labels>
+    <labels>
+        <fullName>SAAlreadyRenewed</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This Special Acceptance has already been renewed.</shortDescription>
+        <value>This Special Acceptance has already been renewed.</value>
+    </labels>
+    <labels>
+        <fullName>SABoundSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptances are bound successfully.</shortDescription>
+        <value>Selected Special Acceptances are bound successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SACannotBeDeleted</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This Special Acceptance cannot be deleted as its status is not draft.</shortDescription>
+        <value>This Special Acceptance cannot be deleted as its status is not draft.</value>
+    </labels>
+    <labels>
+        <fullName>SACannotBeRenewedBindStatus</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This Special Acceptance cannot be renewed as its Bind Status is not Yes.</shortDescription>
+        <value>This Special Acceptance cannot be renewed as its Bind Status is not Yes.</value>
+    </labels>
+    <labels>
+        <fullName>SACreatedSuccessMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Acceptance created successfully.</shortDescription>
+        <value>Special Acceptance created successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SADeletedSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptance Deleted Successfully</shortDescription>
+        <value>Selected Special Acceptance Deleted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>SAGroupCoverErrMsg</fullName>
+        <categories>LWC54</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cannot generate SA Group Cover for an existing SA Group Cover</shortDescription>
+        <value>Cannot generate SA Group Cover for an existing SA Group Cover</value>
+    </labels>
+    <labels>
+        <fullName>SAGroupCoverGeneratedSuccesfully</fullName>
+        <categories>LWC54</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Acceptance Group Cover generated successfully.</shortDescription>
+        <value>Special Acceptance Group Cover generated successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SARNotifiedSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptance requests notified successfully.</shortDescription>
+        <value>Selected Special Acceptance requests notified successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SARUpdatedSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptance requests updated successfully.</shortDescription>
+        <value>Selected Special Acceptance requests updated successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SAReferenceIndex</fullName>
+        <categories>LWC47;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SA Reference Index</shortDescription>
+        <value>00000001</value>
+    </labels>
+    <labels>
+        <fullName>SARenewedSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Acceptance renewed successfully</shortDescription>
+        <value>Special Acceptance renewed successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SASentSuccessfully</fullName>
+        <categories>LWC49</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Special Acceptance requests sent successfully.</shortDescription>
+        <value>Selected Special Acceptance requests sent successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SAUpdatedSuccessfully</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Acceptance updated successfully.</shortDescription>
+        <value>Special Acceptance updated successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SRCC</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SRCC (strikes, riots, civil, commotion), sabotage, popular uprising</shortDescription>
+        <value>SRCC (strikes, riots, civil, commotion), sabotage, popular uprising</value>
+    </labels>
+    <labels>
+        <fullName>STLT</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ST/LT</shortDescription>
+        <value>ST/LT</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Save_Message</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save Message</shortDescription>
+        <value>Do you want to save the change(s) before closing?</value>
+    </labels>
+    <labels>
+        <fullName>Save_header</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>message header</shortDescription>
+        <value>Save changes</value>
+    </labels>
+    <labels>
+        <fullName>SectionNumber</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Section Number</shortDescription>
+        <value>Section Number</value>
+    </labels>
+    <labels>
+        <fullName>Section_Created</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Section created</shortDescription>
+        <value>Section Created Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Section_Updated</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Section updated</shortDescription>
+        <value>Section Updated Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Sections</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sections</shortDescription>
+        <value>Sections</value>
+    </labels>
+    <labels>
+        <fullName>SelectLegalEntityOrNatural</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Either Legal Entity or Natural Person should be selected.</shortDescription>
+        <value>Either Legal Entity or Natural Person should be selected.</value>
+    </labels>
+    <labels>
+        <fullName>Selected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Selected</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>SelectedBRInactive</fullName>
+        <categories>LWC18</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>At least one Broker/Reinsurer selected is inactive</shortDescription>
+        <value>At least one Broker/Reinsurer selected is inactive</value>
+    </labels>
+    <labels>
+        <fullName>Selected_Ceded_Company</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected ceded company</shortDescription>
+        <value>This Covered Ceding Company has already been selected. Please select another one.</value>
+    </labels>
+    <labels>
+        <fullName>SendLeadRequest</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Send Lead Request</shortDescription>
+        <value>Send Lead Request</value>
+    </labels>
+    <labels>
+        <fullName>SentStatus</fullName>
+        <categories>LWC54;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sent Status in SA</shortDescription>
+        <value>Sent</value>
+    </labels>
+    <labels>
+        <fullName>Share</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement Share Perc</shortDescription>
+        <value>Share</value>
+    </labels>
+    <labels>
+        <fullName>SignedShareNotMatchingCessionPlacementS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The total Signed Share of at least one treaty is not matching the Cess &amp; plac S</shortDescription>
+        <value>The total of Signed Share of at least one treaty is not matching the Cession Share and Placement Share</value>
+    </labels>
+    <labels>
+        <fullName>SignedShareNotMatchingCessionS</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The total of Signed Share of at least one treaty is not matching the Cession S</shortDescription>
+        <value>The total of Signed Share of at least one treaty is not matching the Cession Share</value>
+    </labels>
+    <labels>
+        <fullName>SignedShareNotMatchingPlacementS</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The total of Signed Share of at least one treaty is not matching the Placement S</shortDescription>
+        <value>The total of Signed Share of at least one treaty is not matching the Placement Share</value>
+    </labels>
+    <labels>
+        <fullName>SigningRequestNoFXRate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SigningRequestNoFXRate</shortDescription>
+        <value>Sending is not possible because the corresponding FX Rate is missing for the chosen currency</value>
+    </labels>
+    <labels>
+        <fullName>SigningRequestNoSignedShare</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>At least one Signing Request doesn&apos;t have a Signed Share yet</shortDescription>
+        <value>At least one Signing Request doesn&apos;t have a Signed Share yet</value>
+    </labels>
+    <labels>
+        <fullName>SigningRequestStatusSetup</fullName>
+        <categories>LWC30</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You can&apos;t send an update because at least one request has never been sent.</shortDescription>
+        <value>You can&apos;t send an update because at least one request has never been sent.</value>
+    </labels>
+    <labels>
+        <fullName>SigningSavedSuccessfully</fullName>
+        <categories>LWC33</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing details saved successfully.</shortDescription>
+        <value>Signing details saved successfully.</value>
+    </labels>
+    <labels>
+        <fullName>SimulativeLead</fullName>
+        <categories>LWC20</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contain Simulative Lead Request</shortDescription>
+        <value>At least one selected request is simulated, please change the request to Definitive to Send.</value>
+    </labels>
+    <labels>
+        <fullName>SomeDocumetsAttached</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Documets Attached</shortDescription>
+        <value>Your document(s) has(have) been successfully uploaded in ACTOR New Gen</value>
+    </labels>
+    <labels>
+        <fullName>SomeLeadpresent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Lead present</shortDescription>
+        <value>Some Lead Request are present, deactivation is not possible</value>
+    </labels>
+    <labels>
+        <fullName>SomeLeadpresent2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Lead present2</shortDescription>
+        <value>Some Lead Request are present, deactivation is not possible. Please removed Lead request(s)</value>
+    </labels>
+    <labels>
+        <fullName>SomeQuoteOrLeadPresent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Quote Or Lead present</shortDescription>
+        <value>Some quote or lead requests are created. Please remove them to delete your section.</value>
+    </labels>
+    <labels>
+        <fullName>SomeQuoteOrLeadPresentOnTreaty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Quote Or Lead present</shortDescription>
+        <value>Some quote or lead requests are created. Please remove them to delete your treaty.</value>
+    </labels>
+    <labels>
+        <fullName>SomeQuoteOrPlacementpresent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Placement present</shortDescription>
+        <value>Some Placement Request are present, deactivation is not possible</value>
+    </labels>
+    <labels>
+        <fullName>SomeQuoteRequestAssociatedCancelTreatySection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Quote Request Associated Cancel Treaty Section</shortDescription>
+        <value>You selected some quote requests that are associated to one or several cancelled treaties/sections. Please remove them to your selection to perform the action</value>
+    </labels>
+    <labels>
+        <fullName>SomeSecletedSectionsCancelled</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Secleted Sections Cancelled</shortDescription>
+        <value>Some selected sections are cancelled. Please reactivate them in order to retain them to lead</value>
+    </labels>
+    <labels>
+        <fullName>SomeSigningpresent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Some Signing present</shortDescription>
+        <value>Some Signing Request are present, deactivation is not possible</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>Sub_LoB</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sub L.o.B</shortDescription>
+        <value>Sub L.o.B</value>
+    </labels>
+    <labels>
+        <fullName>Super_user</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete button visibility</shortDescription>
+        <value>AGRE_System Admin</value>
+    </labels>
+    <labels>
+        <fullName>SurplusSection</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Surplus Section</shortDescription>
+        <value>Surplus Section</value>
+    </labels>
+    <labels>
+        <fullName>TAL</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TAL</shortDescription>
+        <value>TAL</value>
+    </labels>
+    <labels>
+        <fullName>TR</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tacit Renewal</shortDescription>
+        <value>TR</value>
+    </labels>
+    <labels>
+        <fullName>TR_date</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inception Date Read only</shortDescription>
+        <value>TR Inception date</value>
+    </labels>
+    <labels>
+        <fullName>TacitRenewal</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tacit Renewal</shortDescription>
+        <value>Tacit Renewal</value>
+    </labels>
+    <labels>
+        <fullName>TacitRenewalInformation</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tacit Renewal Information</shortDescription>
+        <value>Tacit Renewal Information</value>
+    </labels>
+    <labels>
+        <fullName>Terrorism</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Terrorism</shortDescription>
+        <value>Terrorism</value>
+    </labels>
+    <labels>
+        <fullName>TotalEPI</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total EPI</shortDescription>
+        <value>Total EPI</value>
+    </labels>
+    <labels>
+        <fullName>TotalPoolError</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total of Pool Shares (%) cannot be greater than 100%</shortDescription>
+        <value>Total of Pool Shares (%) cannot be greater than 100%</value>
+    </labels>
+    <labels>
+        <fullName>Treaties</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaties</shortDescription>
+        <value>Treaties</value>
+    </labels>
+    <labels>
+        <fullName>Treaty</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Name</shortDescription>
+        <value>Treaty</value>
+    </labels>
+    <labels>
+        <fullName>TreatyCreated</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Created Successfully.</shortDescription>
+        <value>Treaty Created Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>TreatyName</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Name</shortDescription>
+        <value>Treaty Name</value>
+    </labels>
+    <labels>
+        <fullName>TreatyNameCopy</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message when copying a treaty</shortDescription>
+        <value>The name of the treaty should be modified</value>
+    </labels>
+    <labels>
+        <fullName>TreatyName_Exists</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty exists</shortDescription>
+        <value>Treaty Name already exists for program.</value>
+    </labels>
+    <labels>
+        <fullName>TreatyName_Unchanged</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty name not changed</shortDescription>
+        <value>Treaty Name has not been changed.</value>
+    </labels>
+    <labels>
+        <fullName>TreatyNotAvailableForProgram</fullName>
+        <categories>LWC15</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Treaty is available for this Program.</shortDescription>
+        <value>No Treaty is available for this Program.</value>
+    </labels>
+    <labels>
+        <fullName>TreatyRef</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TreatyRef</shortDescription>
+        <value>Treaty Ref.</value>
+    </labels>
+    <labels>
+        <fullName>TreatyTypeHelpText</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Type Help Text</shortDescription>
+        <value>This field cannot be changed because there are Section(s) present for this Treaty</value>
+    </labels>
+    <labels>
+        <fullName>TreatyUpdate</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Updated Successfully.</shortDescription>
+        <value>Treaty Updated Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Type</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type of Treaty</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>TypeOfReinsurance</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TypeOfReinsurance</shortDescription>
+        <value>Type of Reinsurance</value>
+    </labels>
+    <labels>
+        <fullName>TypeQuotes</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type of Quotes</shortDescription>
+        <value>Type of Quotes</value>
+    </labels>
+    <labels>
+        <fullName>UWYear</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UW Year</shortDescription>
+        <value>Underwriting Year</value>
+    </labels>
+    <labels>
+        <fullName>Unlimited</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unlimited</shortDescription>
+        <value>Unlimited</value>
+    </labels>
+    <labels>
+        <fullName>Unsaved_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Unsaved Header</shortDescription>
+        <value>Unsaved Changes</value>
+    </labels>
+    <labels>
+        <fullName>Unsaved_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Unsaved Message</shortDescription>
+        <value>You have not saved your changes. Are you sure you want to navigate away?</value>
+    </labels>
+    <labels>
+        <fullName>War</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>War</shortDescription>
+        <value>War</value>
+    </labels>
+    <labels>
+        <fullName>Warning_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning_Header</shortDescription>
+        <value>Well this is awkward...</value>
+    </labels>
+    <labels>
+        <fullName>Warning_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning Message</shortDescription>
+        <value>To use this app, you must assign yourself the &apos;AuraEnabled Scanner User&apos; permission set in the Setup Menu first.</value>
+    </labels>
+    <labels>
+        <fullName>WebXL_Reference</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WebXL Reference</shortDescription>
+        <value>WebXL Reference</value>
+    </labels>
+    <labels>
+        <fullName>WordingName</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wording Name</shortDescription>
+        <value>Wording Name</value>
+    </labels>
+    <labels>
+        <fullName>WorkingScope</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkingScope</shortDescription>
+        <value>WorkingScope</value>
+    </labels>
+    <labels>
+        <fullName>Working_Scope</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Working Scope</shortDescription>
+        <value>Working Scope</value>
+    </labels>
+    <labels>
+        <fullName>Yes</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Yes</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteAnsweredTwoPhases</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Answered Two Phases</shortDescription>
+        <value>You cannot delete the selected section as you have an answer on quote and lead phases.</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteSectionOnLead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Section On Lead</shortDescription>
+        <value>You cannot delete the selected section as you have an answer on lead phase.</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteSectionOnQuote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Section On Quote</shortDescription>
+        <value>You cannot delete the selected section as you have an answer on quote phase.</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteTreatyAnsweredTwoPhases</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Answered Two Phases</shortDescription>
+        <value>You cannot delete the selected treaty as you have an answer on quote and lead phases.</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteTreatyOnLead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Treaty On Lead</shortDescription>
+        <value>You cannot delete the selected treaty as you have an answer on lead phase</value>
+    </labels>
+    <labels>
+        <fullName>YouCannotDeleteTreatyOnQuote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You Cannot Delete Treaty On Quote</shortDescription>
+        <value>You cannot delete the selected treaty as you have an answer on quote phase.</value>
+    </labels>
+    <labels>
+        <fullName>askValidationImpossible</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>askValidation Impossible</shortDescription>
+        <value>Ask for validation action is no more possible to do because it has already completed</value>
+    </labels>
+    <labels>
+        <fullName>axaSAAndAxaXLCYBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AXA SA AND AXA XL CYBER</shortDescription>
+        <value>AXA SA AND AXA XL CYBER /WW (P)</value>
+    </labels>
+    <labels>
+        <fullName>axaSAAndaxaXL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AXA SA AND AXA XL</shortDescription>
+        <value>AXA SA AND AXA XL /WW (P)</value>
+    </labels>
+    <labels>
+        <fullName>capitalManagement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>capitalManagement</shortDescription>
+        <value>Capital Management</value>
+    </labels>
+    <labels>
+        <fullName>cocessionFieldsTotal</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sum of cocession fields</shortDescription>
+        <value>The sum of the Cocession fields should be equal to 100</value>
+    </labels>
+    <labels>
+        <fullName>constantPremiumValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>value constant use on calculating Net Premium for the layer according AutoFac</shortDescription>
+        <value>21</value>
+    </labels>
+    <labels>
+        <fullName>deleteMultipleChoiceAgreementPartI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>deleteMultipleChoiceAgreementPartI</shortDescription>
+        <value>Are you sure you want to do a mass deletion (</value>
+    </labels>
+    <labels>
+        <fullName>deleteMultipleChoiceAgreementPartII</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>deleteMultipleChoiceAgreementPartII</shortDescription>
+        <value>) of these agreements ?</value>
+    </labels>
+    <labels>
+        <fullName>deleteOneChoiceAgreement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>deleteOneChoiceAgreement</shortDescription>
+        <value>Are you sure you want to permanently delete this Agreement ?</value>
+    </labels>
+    <labels>
+        <fullName>emailSent</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing Request closed and email sent successfully</shortDescription>
+        <value>Signing Request closed and email sent successfully</value>
+    </labels>
+    <labels>
+        <fullName>errorMsg</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>An error has occurred. Please contact your System Administrator.</shortDescription>
+        <value>An error has occurred. Please contact your System Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>limitTypeMandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>limitType mandatory</shortDescription>
+        <value>Limit Type field is missing</value>
+    </labels>
+    <labels>
+        <fullName>lossDeptTreaty</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss deposit mode is required when loss deposit level is Treaty</shortDescription>
+        <value>Loss deposit mode is required when loss deposit level is Treaty</value>
+    </labels>
+    <labels>
+        <fullName>maxHundredErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Maximum 100 exceeded</shortDescription>
+        <value>You cannot enter a value greater than 100%</value>
+    </labels>
+    <labels>
+        <fullName>maxResultLimitAgreement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>maxResultLimitAgreement</shortDescription>
+        <value>100</value>
+    </labels>
+    <labels>
+        <fullName>maxThousandErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Maximum 999 exceeded</shortDescription>
+        <value>You cannot enter a value greater than 999%</value>
+    </labels>
+    <labels>
+        <fullName>messageRetainToLead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>messageRetainToLead</shortDescription>
+        <value>At least one of the selected sections is Retained to Lead. Deactivation is not possible. To deactivate it, please delete the Lead request first.</value>
+    </labels>
+    <labels>
+        <fullName>messageSAPart1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>messageSAPart1</shortDescription>
+        <value>You are going to delete the Special Acceptance</value>
+    </labels>
+    <labels>
+        <fullName>messageSAPart2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>messageSAPart2</shortDescription>
+        <value>. This action will delete it on Client Executive portal, but also on the Ceding Company&amp;apos;s one. Are you sure you want to delete the Special Acceptance?</value>
+    </labels>
+    <labels>
+        <fullName>messageSAPart3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>messageSAPart3</shortDescription>
+        <value>You are going to delete the Specials Acceptances</value>
+    </labels>
+    <labels>
+        <fullName>messageloadplacementtable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>message load placementTable</shortDescription>
+        <value>You cannot delete a Special Acceptance in which at least one request has been sent to a reinsurer or a broker.</value>
+    </labels>
+    <labels>
+        <fullName>minHundredErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Value below minimum</shortDescription>
+        <value>You cannot enter a value lower than 100%</value>
+    </labels>
+    <labels>
+        <fullName>noBrokerRein</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Broker-Reinsurer is selected.</shortDescription>
+        <value>No Broker-Reinsurer is selected.</value>
+    </labels>
+    <labels>
+        <fullName>noPlacementReq</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Placement Requests selected</shortDescription>
+        <value>No Placement Requests selected</value>
+    </labels>
+    <labels>
+        <fullName>noRequestAvailable</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Request is available for this Treaty.</shortDescription>
+        <value>No Request is available for this Treaty.</value>
+    </labels>
+    <labels>
+        <fullName>noTreatyAvailable</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Treaty is available for this Program</shortDescription>
+        <value>No Treaty is available for this Program</value>
+    </labels>
+    <labels>
+        <fullName>noTreatyField</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treaty Field is missing.</shortDescription>
+        <value>Treaty Field is missing.</value>
+    </labels>
+    <labels>
+        <fullName>phasesClosed</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous Phases closed successfully.</shortDescription>
+        <value>Previous Phases closed successfully.</value>
+    </labels>
+    <labels>
+        <fullName>placementReqCreated</fullName>
+        <categories>LWC23;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placement Requests Created Successfully.</shortDescription>
+        <value>Placement Requests Created Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>powNetPremiumValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Value used in calculating Net Premium for the layer according AutoFac wording</shortDescription>
+        <value>0.3389</value>
+    </labels>
+    <labels>
+        <fullName>requestDeleted</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing requests deleted sucessfully</shortDescription>
+        <value>Signing requests deleted sucessfully</value>
+    </labels>
+    <labels>
+        <fullName>requestPlacementExistAlready</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>request Placement Exist Already</shortDescription>
+        <value>Placement Requests already exist</value>
+    </labels>
+    <labels>
+        <fullName>requestQuoteExistAlready</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>request Quote Exist already</shortDescription>
+        <value>One of these requests cannot be created as it already exists.</value>
+    </labels>
+    <labels>
+        <fullName>requestReopened</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Signing Request reopened successfully</shortDescription>
+        <value>Selected Signing Request reopened successfully</value>
+    </labels>
+    <labels>
+        <fullName>requestSelected</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Signing Requests selected</shortDescription>
+        <value>No Signing Requests selected</value>
+    </labels>
+    <labels>
+        <fullName>saErrorMsg</fullName>
+        <categories>LWC47</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please fill the Type field in the Special Acceptance. Please contact the adminis</shortDescription>
+        <value>Please fill the Type field in the Special Acceptance. Please contact the administrator if necessary.</value>
+    </labels>
+    <labels>
+        <fullName>selectValidators</fullName>
+        <categories>LWC31;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please select validator(s)</shortDescription>
+        <value>Please select validator(s)</value>
+    </labels>
+    <labels>
+        <fullName>sentForValidation</fullName>
+        <categories>LWC31;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing requests sent for validation</shortDescription>
+        <value>Signing requests sent for validation</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultApexHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultApexHeader</shortDescription>
+        <value>Processing operation</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultConfirmMessage</fullName>
+        <categories>PEG Component LWC Default Action Message Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultConfirmMessage</shortDescription>
+        <value>Please confirm the execution of the requested operation.</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultCreateHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Header</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultCreateHeader</shortDescription>
+        <value>Record creation requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultDeleteHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultDeleteHeader</shortDescription>
+        <value>Record deletion requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultMassPopupHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultMassPopupHeader</shortDescription>
+        <value>Records creation/edition requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultMassPopupMessage</fullName>
+        <categories>PEG Component LWC Default Action Message Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultMassPopupMessage</shortDescription>
+        <value>Please fill/modify the following fields to apply to all records.</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultPopupHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultPopupHeader</shortDescription>
+        <value>Record creation/edition requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultPopupMessage</fullName>
+        <categories>PEG Component LWC Default Action Message Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultPopupMessage</shortDescription>
+        <value>Please fill/modify the following fields.</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultUpdateHeader</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultUpdateHeader</shortDescription>
+        <value>Record update requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionDefaultUploadPopupHeader</fullName>
+        <categories>PEG Component LWC Default Upload Action Message Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionDefaultUploadPopupHeader</shortDescription>
+        <value>File upload requested</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionExecutionError</fullName>
+        <categories>PEG Component LWC Action Execution Error Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionExecutionError</shortDescription>
+        <value>Processing failure!</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionExecutionMessage</fullName>
+        <categories>PEG Component LWC Default Action Header Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionExecutionMessage</shortDescription>
+        <value>Processing operation...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegActionNoRecordError</fullName>
+        <categories>PEG Component LWC Action Execution Error Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegActionNoRecordError</shortDescription>
+        <value>No record to process!</value>
+    </labels>
+    <labels>
+        <fullName>sfpegCardCancel</fullName>
+        <categories>PEG Component LWC Form Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegCardCancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>sfpegCardForceSave</fullName>
+        <categories>PEG Component LWC Form Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegCardForceSave</shortDescription>
+        <value>Save (bypass Duplicates)</value>
+    </labels>
+    <labels>
+        <fullName>sfpegCardModeToggle</fullName>
+        <categories>PEG Component LWC Button Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegCardModeToggle</shortDescription>
+        <value>Toggle Edit/Read mode</value>
+    </labels>
+    <labels>
+        <fullName>sfpegCardSave</fullName>
+        <categories>PEG Component LWC Form Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegCardSave</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>sfpegCardSaveError</fullName>
+        <categories>PEG Component LWC Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegCardSaveError</shortDescription>
+        <value>Record Update failed</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListExport</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListExport</shortDescription>
+        <value>Export</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilter</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListFilter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilterAll</fullName>
+        <categories>PEG Component LWC Option Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListAll</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilterApply</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListFilterApply</shortDescription>
+        <value>Apply</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilterClose</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListFilterClose</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilterPlaceholder</fullName>
+        <categories>PEG Component LWC Input Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListFilterPlaceholder</shortDescription>
+        <value>Enter key words...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListFilterScope</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListFilterScope</shortDescription>
+        <value>Scope Selection</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListInit</fullName>
+        <categories>PEG Component LWC Event Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListInit</shortDescription>
+        <value>Initializing...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListLoadMore</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListLoadMore</shortDescription>
+        <value>Load more...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListLoading</fullName>
+        <categories>PEG Component LWC Event Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListLoading</shortDescription>
+        <value>Loading...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorAll</fullName>
+        <categories>PEG Component LWC Option Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorAll</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorHeader</fullName>
+        <categories>PEG Component LWC Section Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorHeader</shortDescription>
+        <value>Selected Items</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorListHeader</fullName>
+        <categories>PEG Component LWC Section Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorListHeader</shortDescription>
+        <value>Available Items</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorSearchHeader</fullName>
+        <categories>PEG Component LWC Section Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorSearchHeader</shortDescription>
+        <value>Filter your elements</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorSearchPlaceholder</fullName>
+        <categories>PEG Component LWC Input Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorSearchPlaceholder</shortDescription>
+        <value>Please enter search criteria...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListMultiSelectorSortAction</fullName>
+        <categories>PEG Component LWC Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListMultiSelectorSortAction</shortDescription>
+        <value>Sort</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListRefresh</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListRefresh</shortDescription>
+        <value>Refresh</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListSearching</fullName>
+        <categories>PEG Component LWC Event Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListSearching</shortDescription>
+        <value>Searching...</value>
+    </labels>
+    <labels>
+        <fullName>sfpegListSort</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegListSort</shortDescription>
+        <value>Sort</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupCancel</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupCancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupClose</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupClose</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupConfirm</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupConfirm</shortDescription>
+        <value>Confirm</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupFormatsTitle</fullName>
+        <categories>PEG Component LWC Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupFormatsTitle</shortDescription>
+        <value>Accepted File Formats</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupSave</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupSave</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>sfpegPopupSaveNew</fullName>
+        <categories>PEG Component LWC Action Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegPopupSaveNew</shortDescription>
+        <value>Save &amp; New</value>
+    </labels>
+    <labels>
+        <fullName>sfpegRecordListCancelLabel</fullName>
+        <categories>PEG Component LWC Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegRecordListCancelLabel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>sfpegRecordListSaveLabel</fullName>
+        <categories>PEG Component LWC Button Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>sfpegRecordListSaveLabel</shortDescription>
+        <value>Validate</value>
+    </labels>
+    <labels>
+        <fullName>signForPoolSuccess</fullName>
+        <categories>LWC32;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Requests signed Successfully</shortDescription>
+        <value>Requests signed Successfully</value>
+    </labels>
+    <labels>
+        <fullName>signingReqSaved</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing Request saved successfully</shortDescription>
+        <value>Signing Request saved successfully</value>
+    </labels>
+    <labels>
+        <fullName>threeDpErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Decimal places error message for decimal numbers</shortDescription>
+        <value>You cannot add more than 3 decimals after the comma</value>
+    </labels>
+    <labels>
+        <fullName>twoDpErrorMessage</fullName>
+        <categories>LWC01;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Decimal places error message for decimal numbers</shortDescription>
+        <value>You cannot add more than 2 decimals after the comma</value>
+    </labels>
+    <labels>
+        <fullName>updateContact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>updateContact</shortDescription>
+        <value>Please select a contact to update!</value>
+    </labels>
+    <labels>
+        <fullName>writtenShare</fullName>
+        <categories>LWC30;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Written to Signed share completed successfully</shortDescription>
+        <value>Written to Signed share completed successfully</value>
+    </labels>
+</CustomLabels>

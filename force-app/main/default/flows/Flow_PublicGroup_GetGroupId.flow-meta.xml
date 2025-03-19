@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign Group Id to variable varGroupId</description>
+        <name>Assign_GroupId</name>
+        <label>Assign Group Id</label>
+        <locationX>211</locationX>
+        <locationY>216</locationY>
+        <assignmentItems>
+            <assignToReference>varGroupId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_GroupId.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Get Public Group Id by  Principal Ceding Company Referential Id</description>
+    <interviewLabel>&lt;b&gt;Flow_PublicGroup_GetGroupId&lt;/b&gt;
+
+RESOURCE VALUES 
+&lt;p&gt;Execution date: {!$Flow.CurrentDateTime}&lt;/p&gt;
+&lt;p&gt;Record: {!$Flow.CurrentRecord}&lt;/p&gt;
+&lt;p&gt;Principal Ceding Company ReferentialId: {!varPrincipalCedingReferentialId}&lt;/p&gt;
+&lt;p&gt;Public Group Id: {!varGroupId}&lt;/p&gt;
+&lt;p&gt;Error: {!$Flow.FaultMessage}&lt;/p&gt;</interviewLabel>
+    <label>Flow_PublicGroup_GetGroupId</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Public Group Id by  Principal Ceding Company Referential Id</description>
+        <name>Get_GroupId</name>
+        <label>Get GroupId</label>
+        <locationX>55</locationX>
+        <locationY>216</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_GroupId</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varPrincipalCedingReferentialId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>55</locationX>
+        <locationY>51</locationY>
+        <connector>
+            <targetReference>Get_GroupId</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>variable for returned Public Group Id</description>
+        <name>varGroupId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>variable for Principal Ceding Company lookup ReferentialId</description>
+        <name>varPrincipalCedingReferentialId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

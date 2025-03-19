@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Copy_1_of_Set_Name_Account_from_PCC</name>
+        <label>Set Name, Account from PCC</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Apttus__Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Program__r.PrincipalCedingCompany__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TrimmedName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.FullName__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FullName</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>set_tech_programName_to_false</name>
+        <label>set tech programName to false</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.TECH_progNameChange__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Agreement_RecordTypeName</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetNamecession</name>
+        <label>Set Name cession</label>
+        <locationX>578</locationX>
+        <locationY>1019</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FullName__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RetroFullNameCalc</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RetroFullNameCalcTrimmed</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>check_RT</name>
+        <label>check RT</label>
+        <locationX>446</locationX>
+        <locationY>803</locationY>
+        <defaultConnectorLabel>NO</defaultConnectorLabel>
+        <rules>
+            <name>Acceptation_GC_GB</name>
+            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Acceptation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GroupCover</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GlobalBroker</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.isAmended__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Set_Name_Account_from_PCC</targetReference>
+            </connector>
+            <label>Acceptation/GC/GB</label>
+        </rules>
+        <rules>
+            <name>Retrocession_cession</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retrocession</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cession</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Agreement_RecordTypeName.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GlobalBrokerCession</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_amended</targetReference>
+            </connector>
+            <label>Retrocession / cession</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_tech_program_name</name>
+        <label>check tech program name</label>
+        <locationX>446</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Get_Agreement_RecordTypeName</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_true</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TECH_progNameChange__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>set_tech_programName_to_false</targetReference>
+            </connector>
+            <label>is true ?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_amended</name>
+        <label>Is amended</label>
+        <locationX>446</locationX>
+        <locationY>911</locationY>
+        <defaultConnector>
+            <targetReference>SetNamecession</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>yesamended</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.isAmended__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Program_is_set</name>
+        <label>Program is set ?</label>
+        <locationX>776</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>NO</defaultConnectorLabel>
+        <rules>
+            <name>YES</name>
+            <conditionLogic>(1 AND 2) OR 3 OR (1 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Program__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Program__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Program__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RiskCarrier__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.RiskCarrier__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TECH_progNameChange__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>check_tech_program_name</targetReference>
+            </connector>
+            <label>YES</label>
+        </rules>
+    </decisions>
+    <description>When an Agreement is created/updated and Program is set; 
+1/ Set the Account lookup using Program.PCC
+2/ Set Name using given convention ( Ex. A - UWYear - ProgramName)
+3/ Append &apos;&apos;Amended A&apos;&apos; to ceding agreement name</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>AgreementName_Calc</name>
+        <dataType>String</dataType>
+        <expression>{!AgreementName_Prefix_Calc} &amp; &apos; - &apos; &amp;  TEXT({!$Record.Program__r.UwYear__c}) &amp;  &apos; - &apos; &amp;  {!$Record.Program__r.Name} &amp; IF({!$Record.Reinsurer__c} != NULL, &apos; - &apos; &amp; {!$Record.Reinsurer__r.Name},&apos;&apos;) &amp; IF({!$Record.IsCedingAgreement__c}, IF(CONTAINS({!$Record.Apttus__Parent_Agreement__r.FullName__c}, &apos;Amended A&apos;), &apos; - &apos; &amp; {!$Record.CoveredCedingCompany__r.Name} &amp; &apos; Amended A&apos;, &apos; - &apos; &amp; {!$Record.CoveredCedingCompany__r.Name}), &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>AgreementName_Prefix_Calc</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    AND(
+        {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;Acceptation&apos;,
+        {!$Record.InitialAgreement__r.RecordType.DeveloperName} == &apos;GroupCover&apos;
+    ),
+    &apos;GC&apos;,
+    IF(
+        {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;Acceptation&apos;,
+        &apos;A&apos;,
+        IF(
+            {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;GroupCover&apos;,
+            &apos;GC&apos;,
+            IF(
+                OR(
+                      {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;GlobalBroker&apos;,
+                      {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;GlobalBrokerCession&apos;
+                      ),
+                     &apos;B&apos;,
+                IF(
+                    OR(
+                        {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;Cession&apos;,
+                        {!Get_Agreement_RecordTypeName.DeveloperName} == &apos;Retrocession&apos;),
+                        &apos;R&apos;,
+                        &apos;&apos;
+                
+                )
+            )
+        )
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>FullName</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!AgreementName_Calc}, &quot;/&quot;, &quot;_&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>RetroFullname</name>
+        <dataType>String</dataType>
+        <expression>{!AgreementName_Prefix_Calc}+&apos;_&apos;  &amp; TEXT({!$Record.Program__r.UwYear__c}) + &apos;_&apos; &amp;{!$Record.Program__r.Name} &amp; &apos;_&apos; &amp; TRIM(SUBSTITUTE({!$Record.RiskCarrier__r.Name}, &apos;(R)&apos;,&apos;&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>RetroFullNameCalc</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!RetroFullname}, &quot;/&quot;, &quot;_&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>RetroFullNameCalcTrimmed</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!RetroFullNameCalc},80)</expression>
+    </formulas>
+    <formulas>
+        <name>TrimmedName</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!FullName},80)</expression>
+    </formulas>
+    <interviewLabel>Agreement - Set Account (From program&apos;s PCC) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLM - Agreement - Set Name, Account (From program&apos;s PCC)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Used to determine naming convention of agreement</description>
+        <name>Get_Agreement_RecordTypeName</name>
+        <label>Get Agreement RecordTypeName ?</label>
+        <locationX>446</locationX>
+        <locationY>695</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>check_RT</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RecordTypeId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>650</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Program_is_set</targetReference>
+        </connector>
+        <object>Apttus__APTS_Agreement__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

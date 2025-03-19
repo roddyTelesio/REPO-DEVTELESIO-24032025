@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Created Date greater than 18 months (547 days)</description>
+        <name>CreatedDate_18_Months</name>
+        <label>CreatedDate &gt; 18 Months ?</label>
+        <locationX>710</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesCreatedDate18Months</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isCreatedDateExceeds</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateFlagUserActive</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Last Login Date greater than 18 months (547 days)</description>
+        <name>lastLoginDate_18_Months</name>
+        <label>LastLoginDate &gt; 18 Months ?</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesLastLoginDate18Months</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isLastLoginDateExceeds</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateFlagIsActiveUser</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>check if LastLoginDate is empty</description>
+        <name>LastLoginDateExist</name>
+        <label>LastLoginDate Exist ?</label>
+        <locationX>446</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>CreatedDate_18_Months</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LastLoginDate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>lastLoginDate_18_Months</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>V1 : Deactive automaticaly the user if lastLoginDate &gt; 18 or CreatedDate &gt; 18 vers 4
+V2 : reduce duration to 457 days</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>isCreatedDateExceeds</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(NOW() - {!$Record.CreatedDate}  &gt; 457, TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>isLastLoginDateExceeds</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(NOW() - {!$Record.LastLoginDate}  &gt; 457, TRUE, FALSE)</expression>
+    </formulas>
+    <interviewLabel>Flow_Automatic Deactivation User {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow_Automatic Deactivation User</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UpdateFlagIsActiveUser</name>
+        <label>Update Flag isActive User</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <inputAssignments>
+            <field>IsActive</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateFlagUserActive</name>
+        <label>Update Flag User Active</label>
+        <locationX>578</locationX>
+        <locationY>468</locationY>
+        <inputAssignments>
+            <field>IsActive</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>LastLoginDateExist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ProfileId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>00e2o000001dIHsAAM</stringValue>
+            </value>
+        </filters>
+        <object>User</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2024-11-25</startDate>
+            <startTime>02:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>
